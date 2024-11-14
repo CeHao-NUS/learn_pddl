@@ -1,0 +1,116 @@
+Task 1: Move the robot to the charging station.
+1. Locate the nearest charging station.
+2. Align the robot’s base with the charging station direction.
+3. Move forward while checking for obstacles.
+4. Slow down as you approach the charging station.
+5. Adjust position to align the charging port with the station.
+6. Begin charging and monitor for successful connection.
+
+Task 2: Pick up the object and place it on the table.
+1. Detect the object's location.
+2. Move the robotic arm toward the object.
+3. Grasp the object securely with the gripper.
+4. Lift the object slightly.
+5. Position it above the table area.
+6. Lower the object onto the table and release.
+
+Task 3: Navigate to the specified location and wait.
+1. Identify the target location coordinates.
+2. Set an initial path to the destination.
+3. Begin movement, adjusting for any obstacles.
+4. Approach the location carefully as you near it.
+5. Stop upon arrival.
+6. Wait for further instructions.
+
+Task 4: Inspect the area and return to the starting point.
+1. Move to the designated inspection area.
+2. Use sensors to scan for irregularities or hazards.
+3. Document any observations.
+4. Complete a final sweep of the area.
+5. Return to the starting point.
+6. Log inspection results for the operator.
+
+Task 5: Perform a diagnostic check and report back.
+1. Initiate diagnostic mode.
+2. Test each sensor and actuator for functionality.
+3. Verify power levels and communication systems.
+4. Log any detected issues.
+5. Report diagnostic findings to the operator.
+6. Prepare for the next task.
+
+Task 6: Activate the emergency stop if an obstacle is detected.
+1. Activate sensors to monitor for obstacles.
+2. Begin movement in the designated area.
+3. Stop immediately if an obstacle is detected.
+4. Alert the operator about the obstacle.
+5. Await further instructions before proceeding.
+
+Task 7: Adjust the robotic arm to align with the target.
+1. Identify the target location.
+2. Rotate the arm to face the target.
+3. Extend the arm toward the target.
+4. Fine-tune the alignment using sensors.
+5. Confirm alignment with the operator.
+6. Lock the arm in place for the task.
+
+Task 8: Retrieve the item from the bin and deliver it.
+1. Move to the bin location.
+2. Detect the item in the bin.
+3. Grasp the item securely with the robotic arm.
+4. Lift the item and begin transporting it.
+5. Move to the designated delivery area.
+6. Place the item down carefully and release.
+
+Task 9: Position the robot near the conveyor belt.
+1. Locate the conveyor belt area.
+2. Align the robot with the conveyor's edge.
+3. Move to the designated position alongside the conveyor.
+4. Stop once aligned with the belt.
+5. Adjust for precise placement if needed.
+6. Prepare for further actions by the conveyor.
+
+Task 10: Execute a self-test to ensure all systems are operational.
+1. Start the self-test mode.
+2. Check power, sensors, and actuator functionality.
+3. Test communication links for stability.
+4. Monitor results for any issues.
+5. Log the test results.
+6. Notify the operator of system readiness.
+
+Task 11: Unload the cargo from the robot and place it on the shelf.
+1. Move to the unloading area.
+2. Position the robotic arm over the cargo.
+3. Grasp the cargo securely.
+4. Lift the cargo and align with the shelf.
+5. Place the cargo on the designated shelf.
+6. Release the cargo and retract the arm.
+
+Task 12: Identify any potential hazards in the vicinity and report them.
+1. Begin a scan of the surrounding area.
+2. Detect any obstacles, spills, or other hazards.
+3. Log the type and location of each hazard.
+4. Notify the operator with a summary report.
+5. Await further instructions.
+
+Task 13: Check battery levels and return to the docking station for recharge.
+1. Measure the current battery level.
+2. If below the threshold, locate the docking station.
+3. Move toward the docking station.
+4. Align the charging port with the docking input.
+5. Begin the charging process.
+6. Log battery status and start time.
+
+Task 14: Prepare for a system reboot and notify the operator.
+1. Confirm readiness for system reboot.
+2. Save all active task data.
+3. Close unnecessary applications.
+4. Notify the operator of the impending reboot.
+5. Initiate the reboot sequence.
+6. Confirm system functionality post-reboot.
+
+Task 15: Move to the inspection zone and await further instructions.
+1. Locate the designated inspection zone.
+2. Approach the area carefully, avoiding obstacles.
+3. Stop once inside the inspection zone.
+4. Confirm location with the operator.
+5. Await further instructions for inspection tasks.

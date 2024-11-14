@@ -1,0 +1,276 @@
+Task 1: Move the robot to the charging station.
+1. Identify the location of the charging station in the vicinity.
+2. Rotate the robot's base to align its direction toward the charging station.
+3. Start moving forward while constantly scanning for obstacles.
+4. Adjust speed based on the distance to the charging station.
+5. Monitor battery level to ensure sufficient charge for movement.
+6. Activate obstacle detection sensors.
+7. If an obstacle is detected, pause and determine a safe path around it.
+8. Recalculate the path if obstacles persist.
+9. Continue moving toward the charging station once the path is clear.
+10. Approach the charging station slowly as you get closer.
+11. Adjust position to precisely align the robot’s charging port with the station.
+12. Initiate docking procedure, aligning the connection points.
+13. Confirm that the charging port aligns with the station input.
+14. Engage the docking mechanism to establish a connection.
+15. Begin charging process and monitor for successful initiation.
+16. Log the start of the charging process.
+17. Continuously check charging status every few minutes.
+18. Monitor temperature to prevent overheating.
+19. Alert the operator if any charging error occurs.
+20. Wait until the battery reaches 100% capacity.
+21. Log charging completion time.
+22. Disengage the docking mechanism carefully.
+23. Move slightly away from the charging station.
+24. Run a quick diagnostic to ensure full charge.
+25. Prepare the robot for its next task.
+
+Task 2: Pick Up an Object from a Table
+1. Detect the object’s location on the table using onboard sensors.
+2. Rotate the robotic arm to face the object.
+3. Extend the arm toward the object, ensuring a clear path.
+4. Lower the gripper carefully until it reaches the object's level.
+5. Adjust the gripper alignment to match the object's shape and size.
+6. Close the gripper slowly to secure a firm grip on the object.
+7. Verify that the object is held securely by monitoring grip sensors.
+8. Lift the arm slightly to avoid collisions with the table.
+9. Rotate the arm to bring the object to the desired delivery position.
+10. Move the object to the target location at a safe speed.
+11. Lower the object gently to the designated position.
+12. Open the gripper to release the object.
+13. Retract the arm to a neutral position for safety.
+14. Confirm task completion in the robot’s log system.
+
+Task 3: Navigate a Maze to Deliver an Object
+1. Identify the start and end points in the maze.
+2. Plan an initial path using pre-mapped waypoints.
+3. Begin moving forward, constantly scanning for obstacles.
+4. Adjust direction at each intersection according to the path.
+5. Slow down before turns to prevent overshooting.
+6. If an obstacle blocks the path, recalculate a new route.
+7. Continue moving along the recalculated path until the destination is reached.
+8. Carefully maneuver to avoid narrow areas or walls.
+9. Monitor the remaining battery level to ensure enough charge to complete the task.
+10. Stop and reposition if the robot is too close to an obstacle.
+11. Continue forward once clear of obstacles.
+12. Upon reaching the destination, prepare the object for handover.
+13. Log task completion and prepare for the next instruction.
+
+Task 4: Sort Objects by Color on a Conveyor Belt
+1. Activate the camera to scan incoming objects on the conveyor belt.
+2. Detect the color of each object as it approaches the robot.
+3. Based on the detected color, assign the object to the appropriate sorting bin.
+4. Extend the robotic arm toward the object once it is in reach.
+5. Open the gripper and position it over the object.
+6. Close the gripper gently to pick up the object without damaging it.
+7. Lift the arm slightly and move it to the designated bin based on color.
+8. Lower the arm to place the object into the bin.
+9. Open the gripper to release the object.
+10. Retract the arm to a neutral position, ready for the next object.
+11. Repeat the process for each object arriving on the conveyor.
+12. Periodically verify that bins are not overfilled.
+13. Alert the operator if any bin is near capacity.
+14. Log each sorted object by color and bin location for record-keeping.
+
+Task 5: Inspect a Shelf for Missing Items
+1. Move the robot to the inspection starting point in front of the shelf.
+2. Activate the vision system to scan the entire shelf.
+3. Analyze the scanned image to detect any gaps or missing items on the shelf.
+4. Use preloaded shelf layout data to identify specific missing items.
+5. Rotate the camera to get different viewing angles for better accuracy.
+6. Adjust lighting to reduce glare and improve image clarity if needed.
+7. If a missing item is identified, log its location and category.
+8. Notify the operator with details of the missing items.
+9. Continue scanning each shelf row until the entire shelf has been inspected.
+10. Log inspection results and return to the starting point.
+11. Prepare a summary report for the operator, including missing item counts.
+
+Task 6: Assist in Packaging Items for Shipment
+1. Move the robot to the packaging station.
+2. Verify that all packaging materials are available (boxes, tape, labels).
+3. Pick up the first item to be packaged using the robotic arm.
+4. Place the item into the open box carefully.
+5. Repeat the process for additional items designated for the box.
+6. Ensure all items are securely arranged within the box.
+7. Close the box lid and position the taping mechanism.
+8. Apply tape to seal the box securely.
+9. Affix the correct shipping label on top of the box.
+10. Move the box to the designated shipment area.
+11. Update the packaging log with the completed box details.
+12. Repeat the process for each shipment order.
+13. Notify the operator when all packaging is complete.
+
+Task 7: Clean a Designated Area
+1. Move the robot to the designated starting point of the cleaning area.
+2. Activate the cleaning mechanism (vacuum, mop, or sweeper attachment).
+3. Begin moving in a pre-set cleaning pattern to cover the entire area.
+4. Detect any obstacles in the cleaning path and navigate around them.
+5. Adjust speed based on the type of floor surface detected.
+6. Increase cleaning intensity if the robot detects high dirt levels.
+7. Monitor battery level to ensure sufficient charge for the cleaning task.
+8. Refill cleaning solution if levels are low, alerting the operator if necessary.
+9. Continue cleaning until the entire area has been covered.
+10. Move back to the starting point once the task is complete.
+11. Log task completion and notify the operator.
+12. Prepare the robot for the next scheduled cleaning.
+
+Task 8: Perform Inventory Check in a Warehouse
+1. Move to the starting location in the designated warehouse aisle.
+2. Activate sensors to scan items on each shelf level.
+3. Capture image data of each shelf section for analysis.
+4. Compare the detected items with the preloaded inventory list.
+5. Flag any discrepancies, such as missing or misplaced items.
+6. Use robotic arm to reach items for closer inspection if needed.
+7. Document any items that do not match the inventory list.
+8. Move to the next aisle section and repeat the process.
+9. Notify the operator if significant discrepancies are found.
+10. Log all detected items and discrepancies in an inventory report.
+11. Return to the base station after completing all aisles.
+12. Prepare a final report summarizing inventory accuracy and issues.
+
+Task 9: Open a Door and Move to the Next Room
+1. Move the robot to the door and position it correctly for operation.
+2. Detect the door handle location and orientation.
+3. Extend the robotic arm toward the handle.
+4. Grip the handle securely and rotate or pull as needed to open the door.
+5. Monitor handle resistance to apply appropriate force.
+6. Ensure the door is fully open before proceeding.
+7. Release the handle and retract the arm.
+8. Move through the doorway, scanning for obstacles in the next room.
+9. Close the door behind if required, using the arm to push or pull.
+10. Log the completion of the door operation.
+11. Continue with the next task in the sequence after entering the room.
+
+Task 10: Assemble Parts in a Manufacturing Line
+1. Move to the designated assembly station.
+2. Check for availability of all parts required for the assembly task.
+3. Pick up the first part with the robotic arm.
+4. Position the part at the correct location based on assembly instructions.
+5. Secure the part in place using fasteners or connectors if necessary.
+6. Repeat the process for each additional part.
+7. Verify alignment and placement for each part.
+8. Adjust the grip or position if parts do not fit as expected.
+9. Complete the assembly by securing all components together.
+10. Log completion of the assembly task in the system.
+11. Move the assembled item to the designated area.
+12. Prepare the robot for the next assembly job.
+
+Task 11: Load Items onto a Delivery Cart
+1. Move the robot to the loading area where items are staged.
+2. Confirm the destination of each item with the delivery instructions.
+3. Identify the best sequence for loading based on delivery priority.
+4. Pick up the first item and carefully position it on the cart.
+5. Secure the item to prevent it from shifting during transport.
+6. Repeat the process for each item designated for the delivery cart.
+7. Verify that all items are securely positioned on the cart.
+8. Check the cart’s weight distribution to avoid imbalance.
+9. Notify the operator if any items exceed the cart’s load capacity.
+10. Once all items are loaded, confirm the cart’s destination.
+11. Prepare the cart for transport by releasing the brakes.
+12. Log the loading task completion and move to the next task.
+
+Task 12: Calibrate Sensors for Enhanced Precision
+1. Move the robot to the calibration station.
+2. Initialize calibration mode and activate all necessary sensors.
+3. Position the robot's sensors in alignment with calibration markers.
+4. Capture sensor data to compare against known calibration values.
+5. Adjust sensor settings based on any detected discrepancies.
+6. Repeat data capture to confirm accurate calibration.
+7. Document calibration results for future reference.
+8. Recalibrate any sensors that are outside the acceptable range.
+9. Perform a final test to verify calibration accuracy.
+10. Save calibration settings and exit calibration mode.
+11. Notify the operator that calibration is complete.
+
+Task 13: Scan and Identify Damaged Items in Storage
+1. Move to the designated storage area.
+2. Use onboard cameras and sensors to scan each item for visible damage.
+3. Focus on specific areas like edges and surfaces for signs of wear.
+4. Use image processing to identify cracks, dents, or other damage markers.
+5. Mark any damaged items and log their storage location.
+6. If a damaged item is detected, notify the operator immediately.
+7. Continue scanning the entire storage area until complete.
+8. Record the condition of each item for the storage report.
+9. Log the scanning task completion.
+
+Task 14: Transport Hazardous Materials Safely
+1. Move to the hazardous materials storage area.
+2. Verify the type and quantity of materials to be transported.
+3. Confirm that the robotic gripper is configured for safe handling.
+4. Pick up the first hazardous item using the appropriate attachment.
+5. Monitor environmental sensors for any leak or spill during handling.
+6. Transport the item to the designated safe area, moving carefully.
+7. Avoid any sudden movements or high speeds during transport.
+8. Place the item in the designated containment area.
+9. Repeat the process for each hazardous item.
+10. Log completion of the hazardous material transport and notify the operator.
+
+Task 15: Conduct Routine Maintenance Check on Robot Components
+1. Move to the maintenance station.
+2. Inspect the robot’s joints and actuators for signs of wear.
+3. Test the motor function in each joint.
+4. Check the battery status and replace if necessary.
+5. Inspect all sensors to ensure they are functioning correctly.
+6. Perform a test run to verify smooth movement and control.
+7. Document any components that require replacement or adjustment.
+8. Lubricate moving parts to reduce friction and wear.
+9. Clean external surfaces and sensors for optimal performance.
+10. Log the maintenance check and prepare for the next task.
+
+Task 16: Assist in Quality Control for Manufactured Products
+1. Move the robot to the quality control station.
+2. Use cameras to inspect the product for visual defects.
+3. Compare the inspected product against a reference image.
+4. Identify any discrepancies in shape, color, or alignment.
+5. If a defect is found, log the item as defective.
+6. Separate defective items from the acceptable batch.
+7. Record inspection results in the quality control log.
+8. Repeat the inspection process for each product in the batch.
+9. Notify the operator if the defect rate exceeds the acceptable threshold.
+10. Prepare a summary report of inspection results.
+
+Task 17: Paint a Surface Using a Robotic Arm
+1. Move the robot to the designated painting area.
+2. Load the required color of paint into the spray attachment.
+3. Position the arm at the starting point on the surface.
+4. Activate the spray mechanism to apply an even coat of paint.
+5. Move the arm in a consistent pattern across the surface.
+6. Adjust the spraying speed based on surface texture.
+7. Monitor the paint level and refill if necessary.
+8. Stop spraying when reaching the end of the designated area.
+9. Inspect the painted area to ensure even coverage.
+10. Repeat the process for any additional surfaces to be painted.
+11. Clean the spray attachment after the task is complete.
+
+Task 18: Perform Basic Diagnostics on Robot Systems
+1. Move the robot to the diagnostics station.
+2. Run a software check for any errors in the control system.
+3. Test each actuator and sensor to ensure proper response.
+4. Check the communication systems for stability and signal quality.
+5. Verify power supply levels and battery health.
+6. Record the status of all diagnostics tests.
+7. Resolve any minor issues detected during diagnostics.
+8. If a major issue is detected, notify the operator.
+9. Log all diagnostics results and prepare the robot for use.
+
+Task 19: Unload Items from a Delivery Cart
+1. Move to the unloading area with the delivery cart.
+2. Identify the destination of each item on the cart.
+3. Start with the first item and lift it carefully from the cart.
+4. Transport the item to its designated location in the storage area.
+5. Ensure each item is placed securely at the destination.
+6. Repeat the unloading process for all items on the cart.
+7. Verify that all items are correctly positioned as per the storage plan.
+8. Log each item’s location for inventory purposes.
+9. Confirm completion of the unloading task.
+
+Task 20: Conduct an Emergency Shutdown Procedure
+1. Detect the emergency signal or operator command for shutdown.
+2. Immediately stop all robot movement and halt ongoing tasks.
+3. Safely retract any extended robotic arms or tools.
+4. Power down any auxiliary systems in an orderly manner.
+5. Disable sensors to conserve power in case of prolonged shutdown.
+6. Secure the robot in a stable, safe position.
+7. Notify the operator of the shutdown status.
+8. Log the emergency shutdown for maintenance records.
+9. Wait for further instructions or emergency recovery protocol.
