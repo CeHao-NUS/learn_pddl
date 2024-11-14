@@ -4,9 +4,7 @@ from datasets import Dataset
 
 # Step 1: Define function to load custom texts from dataset.txt
 from learn_pddl.datasets.load_fun import load_custom_texts
-import learn_pddl
-import os
-custom_texts = load_custom_texts(os.path.join(os.path.dirname(learn_pddl.__file__),"datasets/dataset.txt"))
+custom_texts = load_custom_texts("datasets/dataset.txt")
 
 # Step 2: Initialize the GPT-2 model and tokenizer
 model_name = "gpt2"  # Use GPT-2 model

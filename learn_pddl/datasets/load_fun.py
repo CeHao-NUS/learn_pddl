@@ -1,5 +1,13 @@
+
+
+import learn_pddl
+import os
+
 def load_custom_texts(file_path):
-    with open(file_path, 'r') as file:
+
+    based_path = os.path.join(os.path.dirname(learn_pddl.__file__),file_path)
+
+    with open(based_path, 'r') as file:
         lines = file.readlines()
 
     tasks = []

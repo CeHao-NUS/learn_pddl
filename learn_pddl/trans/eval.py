@@ -1,9 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
-import learn_pddl
-import os
-
 # Load the fine-tuned GPT-2 model and tokenizer
 model_path = "./saved_model"
 model = AutoModelForCausalLM.from_pretrained(model_path)
@@ -13,7 +10,7 @@ model.to(device)
 
 # Load custom_texts from dataset.txt
 from learn_pddl.datasets.load_fun import load_custom_texts
-custom_texts = load_custom_texts(os.path.join(os.path.dirname(learn_pddl.__file__),"datasets/dataset.txt"))
+custom_texts = load_custom_texts("datasets/dataset.txt")
 
 # Ensure PAD token is set
 if tokenizer.pad_token is None:
