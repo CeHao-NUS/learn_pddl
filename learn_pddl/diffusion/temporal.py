@@ -4,7 +4,7 @@ import einops
 from einops.layers.torch import Rearrange
 import pdb
 
-from helpers import (
+from learn_pddl.diffusion.helpers import (
     SinusoidalPosEmb,
     Downsample1d,
     Upsample1d,

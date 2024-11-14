@@ -41,21 +41,54 @@ def bits_to_text(bits, tokenizer, n_bits=16):
     return text
 
 from learn_pddl.datasets.load_fun import load_custom_texts
+Batch = namedtuple('Batch', 'trajectories conditions')
+
+
+class Normalizer:
+    def normalize(self, text, type):
+        pass
+
+    def unnormalize(self, bits, type):
+        # return bits_to_text(bits)
+        pass
 
 class BitDataset(torch.utils.data.Dataset):
 
-    def __init__(self, text_data_dir, n_bits=16, horizon=64):
+    def __init__(self, text_data_dir, n_bits=16, horizon=64, observation_dim=16, action_dim=0):
         self.text_data = load_custom_texts(text_data_dir)
         self.tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
         self.n_bits = n_bits
         self.bits =[text_to_bits(text, self.tokenizer, n_bits) for text in self.text_data]
         self.horizon = horizon
 
+        self.observation_dim = observation_dim
+        self.action_dim = action_dim
+
+        self.normalizer = Normalizer()  
+
     def __len__(self):
         return len(self.bits)
     
+    def get_conditions(self, observations):
+        '''
+            condition on current observation for planning
+        '''
+        return {0: observations[0]}
+    
     def __getitem__(self, idx):
-        return self.bits[idx][:self.horizon]
+        observations = self.bits[idx][:self.horizon]
+        # to float
+        observations = observations.astype(np.float32)
+
+        text = self.text_data[idx]
+    
+        conditions = self.get_conditions(observations)
+        # trajectories = np.concatenate([actions, observations], axis=-1)
+        trajectories = observations
+        batch = Batch(trajectories, conditions)
+
+        assert observations.shape == (32, 16)
+        return batch
     
     def decode_bit2text(self, bits):
         return bits_to_text(bits, self.tokenizer, self.n_bits)

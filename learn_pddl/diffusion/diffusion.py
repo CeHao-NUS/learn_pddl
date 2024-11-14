@@ -4,8 +4,8 @@ import torch
 from torch import nn
 import pdb
 
-import utils as utils
-from helpers import (
+import learn_pddl.diffusion.utils as utils
+from learn_pddl.diffusion.helpers import (
     cosine_beta_schedule,
     extract,
     apply_conditioning,

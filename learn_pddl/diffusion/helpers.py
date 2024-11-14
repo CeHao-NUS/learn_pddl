@@ -7,7 +7,7 @@ import einops
 from einops.layers.torch import Rearrange
 import pdb
 
-import utils as utils
+import learn_pddl.diffusion.utils as utils
 
 #-----------------------------------------------------------------------------#
 #---------------------------------- modules ----------------------------------#
