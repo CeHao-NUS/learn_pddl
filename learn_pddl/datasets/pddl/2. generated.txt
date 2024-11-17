@@ -1,0 +1,251 @@
+Task 1: Move the apple from the plate in the fridge to the bowl, then place the bowl with the apple into the microwave.
+1. fridge close | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge open | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge open | microwave close | cabinet close | plate in-hand | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+4. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+5. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+6. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-hand | pork on-plate | fish on-pan
+7. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-bowl | pork on-plate | fish on-pan
+8. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-bowl | pork on-plate | fish on-pan
+9. fridge close | microwave open | cabinet close | plate on-table | bowl in-hand | pan in-cabinet | apple in-bowl | pork on-plate | fish on-pan
+10. fridge close | microwave open | cabinet close | plate on-table | bowl in-microwave | pan in-cabinet | apple in-bowl | pork on-plate | fish on-pan
+11. fridge close | microwave close | cabinet close | plate on-table | bowl in-microwave | pan in-cabinet | apple in-bowl | pork on-plate | fish on-pan
+
+Task 2: Move pork from the plate to the pan, then store the pan in the cabinet
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+4. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+5. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-hand | fish on-pan
+6. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-pan | fish on-pan
+7. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork in-pan | fish on-pan
+8. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork in-pan | fish on-pan
+9. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork in-pan | fish on-pan
+
+Task 3: Move the fish from the pan to the bowl, then store the bowl in the fridge
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+4. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+5. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-hand
+6. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+7. fridge close | microwave close | cabinet open | plate on-table | bowl in-hand | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+8. fridge open | microwave close | cabinet open | plate on-table | bowl in-hand | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+9. fridge open | microwave close | cabinet open | plate on-table | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+10. fridge close | microwave close | cabinet open | plate on-table | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+
+Task 4: Heat the apple in the microwave, then transfer it to the plate
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-hand | pork on-plate | fish on-pan
+3. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-hand | pork on-plate | fish on-pan
+4. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-microwave | pork on-plate | fish on-pan
+5. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-microwave | pork on-plate | fish on-pan
+6. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-microwave | pork on-plate | fish on-pan
+7. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-hand | pork on-plate | fish on-pan
+8. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+
+Task 5: Rearrange the objects—place pork and apple on a plate in the fridge, and fish in the bowl on the table
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-hand | pork on-plate | fish on-pan
+3. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-hand | pork on-plate | fish on-pan
+4. fridge open | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+5. fridge open | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork in-hand | fish on-pan
+6. fridge open | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+7. fridge close | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+8. fridge close | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish in-hand
+9. fridge close | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish in-bowl
+
+Task 6: Store all containers and objects in the fridge
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge open | microwave close | cabinet close | plate in-hand | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+4. fridge open | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+5. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-hand | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+6. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+7. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+8. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan in-fridge | apple on-plate | pork on-plate | fish on-pan
+9. fridge close | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan in-fridge | apple on-plate | pork on-plate | fish on-pan
+
+Task 7: Set the table—arrange the plate, bowl, and pan on the table with apple, pork, and fish
+1. fridge close | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge open | microwave close | cabinet close | plate in-hand | bowl in-fridge | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+4. fridge open | microwave close | cabinet close | plate on-table | bowl in-fridge | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+5. fridge open | microwave close | cabinet close | plate on-table | bowl in-hand | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+6. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+7. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+8. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+9. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+10. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+11. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-pan | fish in-bowl
+
+Task 8: Sort the objects—place pork in the pan in the cabinet and apple in the bowl in the microwave
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+4. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+5. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-hand | fish on-pan
+6. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-pan | fish on-pan
+7. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork in-pan | fish on-pan
+8. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork in-pan | fish on-pan
+9. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork in-pan | fish on-pan
+10. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple in-hand | pork in-pan | fish on-pan
+11. fridge close | microwave open | cabinet close | plate on-table | bowl in-hand | pan in-cabinet | apple in-bowl | pork in-pan | fish on-pan
+12. fridge close | microwave open | cabinet close | plate on-table | bowl in-microwave | pan in-cabinet | apple in-bowl | pork in-pan | fish on-pan
+
+Task 9: Transfer all objects to the table
+1. fridge close | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge open | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge open | microwave close | cabinet close | plate in-hand | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+4. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+5. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+6. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+7. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+
+Task 10: Store fish in the fridge, apple in the cabinet, and pork in the microwave
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-hand
+3. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-hand
+4. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+5. fridge open | microwave close | cabinet close | plate on-table | bowl in-hand | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+6. fridge open | microwave close | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+7. fridge close | microwave close | cabinet open | plate on-table | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+8. fridge close | microwave close | cabinet open | plate on-table | bowl in-fridge | pan on-table | apple in-hand | pork on-plate | fish in-bowl
+9. fridge close | microwave close | cabinet open | plate on-table | bowl in-fridge | pan on-table | apple in-cabinet | pork on-plate | fish in-bowl
+10. fridge close | microwave open | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple in-cabinet | pork in-hand | fish in-bowl
+11. fridge close | microwave open | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple in-cabinet | pork in-microwave | fish in-bowl
+12. fridge close | microwave close | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple in-cabinet | pork in-microwave | fish in-bowl
+
+Task 11: Cook pork—transfer it to the pan, then heat the pan in the microwave
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+4. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+5. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-hand | fish on-pan
+6. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-pan | fish on-pan
+7. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork in-pan | fish on-pan
+8. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-microwave | apple on-plate | pork in-pan | fish on-pan
+9. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-microwave | apple on-plate | pork in-pan | fish on-pan
+
+Task 12: Empty the fridge—move all objects and containers to the table
+1. fridge close | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-pan
+3. fridge open | microwave close | cabinet close | plate in-hand | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-pan
+4. fridge open | microwave close | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-pan
+5. fridge open | microwave close | cabinet close | plate on-table | bowl in-hand | pan on-table | apple on-plate | pork on-plate | fish on-pan
+6. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+7. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+
+Task 13: Serve a meal—arrange pork, apple, and fish on a plate, and place it on the table
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple in-hand | pork on-plate | fish on-pan
+3. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-hand | fish on-pan
+4. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-hand
+5. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-plate
+
+Task 14: Clean up—return all objects and containers to their original locations
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-plate
+2. fridge open | microwave close | cabinet close | plate in-hand | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-plate
+3. fridge open | microwave close | cabinet close | plate in-fridge | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-plate
+4. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-hand | pan on-table | apple on-plate | pork on-plate | fish on-plate
+5. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-plate
+6. fridge close | microwave close | cabinet open | plate in-fridge | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-plate
+7. fridge close | microwave close | cabinet open | plate in-fridge | bowl in-fridge | pan in-hand | apple on-plate | pork on-plate | fish on-plate
+8. fridge close | microwave close | cabinet open | plate in-fridge | bowl in-fridge | pan in-cabinet | apple on-plate | pork on-plate | fish on-plate
+9. fridge close | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan in-cabinet | apple on-plate | pork on-plate | fish on-plate
+
+Task 15: Prepare the bowl and plate for serving food
+1. fridge close | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave open | cabinet close | plate in-fridge | bowl in-hand | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge close | microwave open | cabinet close | plate in-fridge | bowl in-microwave | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+4. fridge open | microwave open | cabinet close | plate in-hand | bowl in-microwave | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+5. fridge open | microwave open | cabinet close | plate on-table | bowl in-microwave | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+
+Task 16: Heat fish, then transfer it to the bowl
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-hand
+3. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-microwave
+4. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-microwave
+5. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-hand
+6. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+
+Task 17: Place all objects into the bowl and store it in the cabinet
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork in-hand | fish on-pan
+3. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork in-bowl | fish on-pan
+4. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork in-bowl | fish in-hand
+5. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork in-bowl | fish in-bowl
+6. fridge close | microwave close | cabinet close | plate on-table | bowl in-hand | pan in-cabinet | apple in-hand | pork in-bowl | fish in-bowl
+7. fridge close | microwave close | cabinet open | plate on-table | bowl in-cabinet | pan in-cabinet | apple in-hand | pork in-bowl | fish in-bowl
+8. fridge close | microwave close | cabinet close | plate on-table | bowl in-cabinet | pan in-cabinet | apple in-bowl | pork in-bowl | fish in-bowl
+
+Task 18: Transfer the pan to the microwave and clean the table
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+3. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan in-microwave | apple on-plate | pork on-plate | fish on-pan
+4. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-microwave | apple on-plate | pork on-plate | fish on-pan
+5. fridge open | microwave close | cabinet close | plate in-hand | bowl on-table | pan in-microwave | apple on-plate | pork on-plate | fish on-pan
+6. fridge open | microwave close | cabinet close | plate in-fridge | bowl on-table | pan in-microwave | apple on-plate | pork on-plate | fish on-pan
+7. fridge close | microwave close | cabinet open | plate in-fridge | bowl in-hand | pan in-microwave | apple on-plate | pork on-plate | fish on-pan
+8. fridge close | microwave close | cabinet close | plate in-fridge | bowl in-cabinet | pan in-microwave | apple on-plate | pork on-plate | fish on-pan
+
+Task 19: Arrange objects on the table for a meal
+1. fridge close | microwave close | cabinet close | plate in-fridge | bowl in-cabinet | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge open | microwave close | cabinet close | plate in-hand | bowl in-cabinet | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+3. fridge open | microwave close | cabinet close | plate on-table | bowl in-cabinet | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+4. fridge close | microwave close | cabinet open | plate on-table | bowl in-hand | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+5. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+6. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+7. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+8. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple in-bowl | pork on-plate | fish on-pan
+
+Task 20: Store all food items separately
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-hand | fish on-pan
+3. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-fridge | fish on-pan
+4. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-fridge | fish in-hand
+5. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-fridge | fish in-cabinet
+6. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan on-table | apple in-hand | pork in-fridge | fish in-cabinet
+7. fridge close | microwave open | cabinet close | plate on-table | bowl on-table | pan on-table | apple in-microwave | pork in-fridge | fish in-cabinet
+8. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple in-microwave | pork in-fridge | fish in-cabinet
+
+Task 21: Prepare the pan with all items and store it in the fridge
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-cabinet | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan in-hand | apple on-plate | pork on-plate | fish on-pan
+3. fridge close | microwave close | cabinet open | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+4. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-hand | fish on-pan
+5. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-pan | fish on-pan
+6. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple in-hand | pork in-pan | fish on-pan
+7. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple in-pan | pork in-pan | fish on-pan
+8. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-hand | apple in-pan | pork in-pan | fish on-pan
+9. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan in-hand | apple in-pan | pork in-pan | fish on-pan
+10. fridge open | microwave close | cabinet close | plate on-table | bowl on-table | pan in-fridge | apple in-pan | pork in-pan | fish in-pan
+11. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan in-fridge | apple in-pan | pork in-pan | fish in-pan
+
+Task 22: Serve a single dish from the pan
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork in-hand | fish on-pan
+3. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-hand
+4. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-plate
+5. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple in-hand | pork on-plate | fish on-plate
+6. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-plate
+
+Task 23: Store the bowl with fish in the microwave
+1. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-hand
+3. fridge close | microwave close | cabinet close | plate on-table | bowl on-table | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+4. fridge close | microwave open | cabinet close | plate on-table | bowl in-hand | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+5. fridge close | microwave open | cabinet close | plate on-table | bowl in-microwave | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+6. fridge close | microwave close | cabinet close | plate on-table | bowl in-microwave | pan on-table | apple on-plate | pork on-plate | fish in-bowl
+
+Task 24: Clear the fridge and prepare for cleaning
+1. fridge close | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-pan
+2. fridge open | microwave close | cabinet close | plate in-fridge | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-pan
+3. fridge open | microwave close | cabinet close | plate in-hand | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-pan
+4. fridge open | microwave close | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple on-plate | pork on-plate | fish on-pan
+5. fridge open | microwave close | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple in-hand | pork on-plate | fish on-pan
+6. fridge open | microwave close | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple on-table | pork on-plate | fish on-pan
+7. fridge open | microwave close | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple on-table | pork in-hand | fish on-pan
+8. fridge close | microwave close | cabinet close | plate on-table | bowl in-fridge | pan on-table | apple on-table | pork on-table | fish on-pan
+
+

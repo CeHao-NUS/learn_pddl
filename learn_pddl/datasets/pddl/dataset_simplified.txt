@@ -1,0 +1,250 @@
+Task 1: Move the apple from the plate in the fridge to the bowl, then place the bowl with the apple into the microwave.
+1. close close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+2. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+3. open close close in-hand on-table in-cabinet on-plate on-plate on-pan
+4. open close close on-table on-table in-cabinet on-plate on-plate on-pan
+5. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+6. close close close on-table on-table in-cabinet in-hand on-plate on-pan
+7. close close close on-table on-table in-cabinet in-bowl on-plate on-pan
+8. close open close on-table on-table in-cabinet in-bowl on-plate on-pan
+9. close open close on-table in-hand in-cabinet in-bowl on-plate on-pan
+10. close open close on-table in-microwave in-cabinet in-bowl on-plate on-pan
+11. close close close on-table in-microwave in-cabinet in-bowl on-plate on-pan
+
+Task 2: Move pork from the plate to the pan, then store the pan in the cabinet
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+3. close close open on-table on-table in-hand on-plate on-plate on-pan
+4. close close open on-table on-table on-table on-plate on-plate on-pan
+5. close close open on-table on-table on-table on-plate in-hand on-pan
+6. close close open on-table on-table on-table on-plate in-pan on-pan
+7. close close open on-table on-table in-hand on-plate in-pan on-pan
+8. close close open on-table on-table in-cabinet on-plate in-pan on-pan
+9. close close close on-table on-table in-cabinet on-plate in-pan on-pan
+
+Task 3: Move the fish from the pan to the bowl, then store the bowl in the fridge
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+3. close close open on-table on-table in-hand on-plate on-plate on-pan
+4. close close open on-table on-table on-table on-plate on-plate on-pan
+5. close close open on-table on-table on-table on-plate on-plate in-hand
+6. close close open on-table on-table on-table on-plate on-plate in-bowl
+7. close close open on-table in-hand on-table on-plate on-plate in-bowl
+8. open close open on-table in-hand on-table on-plate on-plate in-bowl
+9. open close open on-table in-fridge on-table on-plate on-plate in-bowl
+10. close close open on-table in-fridge on-table on-plate on-plate in-bowl
+
+Task 4: Heat the apple in the microwave, then transfer it to the plate
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close close on-table on-table in-cabinet in-hand on-plate on-pan
+3. close open close on-table on-table in-cabinet in-hand on-plate on-pan
+4. close open close on-table on-table in-cabinet in-microwave on-plate on-pan
+5. close close close on-table on-table in-cabinet in-microwave on-plate on-pan
+6. close open close on-table on-table in-cabinet in-microwave on-plate on-pan
+7. close open close on-table on-table in-cabinet in-hand on-plate on-pan
+8. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+
+Task 5: Rearrange the objects—place pork and apple on a plate in the fridge, and fish in the bowl on the table
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close close on-table on-table in-cabinet in-hand on-plate on-pan
+3. open close close on-table on-table in-cabinet in-hand on-plate on-pan
+4. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+5. open close close in-fridge on-table in-cabinet on-plate in-hand on-pan
+6. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+7. close close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+8. close close close in-fridge on-table in-cabinet on-plate on-plate in-hand
+9. close close close in-fridge on-table in-cabinet on-plate on-plate in-bowl
+
+Task 6: Store all containers and objects in the fridge
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. open close close on-table on-table in-cabinet on-plate on-plate on-pan
+3. open close close in-hand on-table in-cabinet on-plate on-plate on-pan
+4. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+5. open close close in-fridge in-hand in-cabinet on-plate on-plate on-pan
+6. open close close in-fridge in-fridge in-cabinet on-plate on-plate on-pan
+7. open close close in-fridge in-fridge in-hand on-plate on-plate on-pan
+8. open close close in-fridge in-fridge in-fridge on-plate on-plate on-pan
+9. close close close in-fridge in-fridge in-fridge on-plate on-plate on-pan
+
+Task 7: Set the table—arrange the plate, bowl, and pan on the table with apple, pork, and fish
+1. close close close in-fridge in-fridge in-cabinet on-plate on-plate on-pan
+2. open close close in-fridge in-fridge in-cabinet on-plate on-plate on-pan
+3. open close close in-hand in-fridge in-cabinet on-plate on-plate on-pan
+4. open close close on-table in-fridge in-cabinet on-plate on-plate on-pan
+5. open close close on-table in-hand in-cabinet on-plate on-plate on-pan
+6. open close close on-table on-table in-cabinet on-plate on-plate on-pan
+7. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+8. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+9. close close open on-table on-table in-hand on-plate on-plate on-pan
+10. close close open on-table on-table on-table on-plate on-plate on-pan
+11. close close close on-table on-table on-table on-plate in-pan in-bowl
+
+Task 8: Sort the objects—place pork in the pan in the cabinet and apple in the bowl in the microwave
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+3. close close open on-table on-table in-hand on-plate on-plate on-pan
+4. close close open on-table on-table on-table on-plate on-plate on-pan
+5. close close open on-table on-table on-table on-plate in-hand on-pan
+6. close close open on-table on-table on-table on-plate in-pan on-pan
+7. close close open on-table on-table in-hand on-plate in-pan on-pan
+8. close close open on-table on-table in-cabinet on-plate in-pan on-pan
+9. close close close on-table on-table in-cabinet on-plate in-pan on-pan
+10. close open close on-table on-table in-cabinet in-hand in-pan on-pan
+11. close open close on-table in-hand in-cabinet in-bowl in-pan on-pan
+12. close open close on-table in-microwave in-cabinet in-bowl in-pan on-pan
+
+Task 9: Transfer all objects to the table
+1. close close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+2. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+3. open close close in-hand on-table in-cabinet on-plate on-plate on-pan
+4. open close close on-table on-table in-cabinet on-plate on-plate on-pan
+5. open close close on-table on-table in-hand on-plate on-plate on-pan
+6. open close close on-table on-table on-table on-plate on-plate on-pan
+7. close close close on-table on-table on-table on-plate on-plate on-pan
+
+Task 10: Store fish in the fridge, apple in the cabinet, and pork in the microwave
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table on-plate on-plate in-hand
+3. open close close on-table on-table on-table on-plate on-plate in-hand
+4. open close close on-table on-table on-table on-plate on-plate in-bowl
+5. open close close on-table in-hand on-table on-plate on-plate in-bowl
+6. open close close on-table in-fridge on-table on-plate on-plate in-bowl
+7. close close open on-table in-fridge on-table on-plate on-plate in-bowl
+8. close close open on-table in-fridge on-table in-hand on-plate in-bowl
+9. close close open on-table in-fridge on-table in-cabinet on-plate in-bowl
+10. close open close on-table in-fridge on-table in-cabinet in-hand in-bowl
+11. close open close on-table in-fridge on-table in-cabinet in-microwave in-bowl
+12. close close close on-table in-fridge on-table in-cabinet in-microwave in-bowl
+
+Task 11: Cook pork—transfer it to the pan, then heat the pan in the microwave
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+3. close close open on-table on-table in-hand on-plate on-plate on-pan
+4. close close open on-table on-table on-table on-plate on-plate on-pan
+5. close close close on-table on-table on-table on-plate in-hand on-pan
+6. close close close on-table on-table on-table on-plate in-pan on-pan
+7. close open close on-table on-table in-hand on-plate in-pan on-pan
+8. close open close on-table on-table in-microwave on-plate in-pan on-pan
+9. close close close on-table on-table in-microwave on-plate in-pan on-pan
+
+Task 12: Empty the fridge—move all objects and containers to the table
+1. close close close in-fridge in-fridge on-table on-plate on-plate on-pan
+2. open close close in-fridge in-fridge on-table on-plate on-plate on-pan
+3. open close close in-hand in-fridge on-table on-plate on-plate on-pan
+4. open close close on-table in-fridge on-table on-plate on-plate on-pan
+5. open close close on-table in-hand on-table on-plate on-plate on-pan
+6. open close close on-table on-table on-table on-plate on-plate on-pan
+7. close close close on-table on-table on-table on-plate on-plate on-pan
+
+Task 13: Serve a meal—arrange pork, apple, and fish on a plate, and place it on the table
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table in-hand on-plate on-pan
+3. close close close on-table on-table on-table on-plate in-hand on-pan
+4. close close close on-table on-table on-table on-plate on-plate in-hand
+5. close close close on-table on-table on-table on-plate on-plate on-plate
+
+Task 14: Clean up—return all objects and containers to their original locations
+1. close close close on-table on-table on-table on-plate on-plate on-plate
+2. open close close in-hand on-table on-table on-plate on-plate on-plate
+3. open close close in-fridge on-table on-table on-plate on-plate on-plate
+4. open close close in-fridge in-hand on-table on-plate on-plate on-plate
+5. open close close in-fridge in-fridge on-table on-plate on-plate on-plate
+6. close close open in-fridge in-fridge on-table on-plate on-plate on-plate
+7. close close open in-fridge in-fridge in-hand on-plate on-plate on-plate
+8. close close open in-fridge in-fridge in-cabinet on-plate on-plate on-plate
+9. close close close in-fridge in-fridge in-cabinet on-plate on-plate on-plate
+
+Task 15: Prepare the bowl and plate for serving food
+1. close close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+2. close open close in-fridge in-hand in-cabinet on-plate on-plate on-pan
+3. close open close in-fridge in-microwave in-cabinet on-plate on-plate on-pan
+4. open open close in-hand in-microwave in-cabinet on-plate on-plate on-pan
+5. open open close on-table in-microwave in-cabinet on-plate on-plate on-pan
+
+Task 16: Heat fish, then transfer it to the bowl
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close open close on-table on-table on-table on-plate on-plate in-hand
+3. close open close on-table on-table on-table on-plate on-plate in-microwave
+4. close close close on-table on-table on-table on-plate on-plate in-microwave
+5. close open close on-table on-table on-table on-plate on-plate in-hand
+6. close open close on-table on-table on-table on-plate on-plate in-bowl
+
+Task 17: Place all objects into the bowl and store it in the cabinet
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close close on-table on-table in-cabinet on-plate in-hand on-pan
+3. close close close on-table on-table in-cabinet on-plate in-bowl on-pan
+4. close close close on-table on-table in-cabinet on-plate in-bowl in-hand
+5. close close close on-table on-table in-cabinet on-plate in-bowl in-bowl
+6. close close close on-table in-hand in-cabinet in-hand in-bowl in-bowl
+7. close close open on-table in-cabinet in-cabinet in-hand in-bowl in-bowl
+8. close close close on-table in-cabinet in-cabinet in-bowl in-bowl in-bowl
+
+Task 18: Transfer the pan to the microwave and clean the table
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close open close on-table on-table in-hand on-plate on-plate on-pan
+3. close open close on-table on-table in-microwave on-plate on-plate on-pan
+4. close close close on-table on-table in-microwave on-plate on-plate on-pan
+5. open close close in-hand on-table in-microwave on-plate on-plate on-pan
+6. open close close in-fridge on-table in-microwave on-plate on-plate on-pan
+7. close close open in-fridge in-hand in-microwave on-plate on-plate on-pan
+8. close close close in-fridge in-cabinet in-microwave on-plate on-plate on-pan
+
+Task 19: Arrange objects on the table for a meal
+1. close close close in-fridge in-cabinet in-cabinet on-plate on-plate on-pan
+2. open close close in-hand in-cabinet in-cabinet on-plate on-plate on-pan
+3. open close close on-table in-cabinet in-cabinet on-plate on-plate on-pan
+4. close close open on-table in-hand in-cabinet on-plate on-plate on-pan
+5. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+6. close close open on-table on-table in-hand on-plate on-plate on-pan
+7. close close close on-table on-table on-table on-plate on-plate on-pan
+8. close close close on-table on-table on-table in-bowl on-plate on-pan
+
+Task 20: Store all food items separately
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table on-plate in-hand on-pan
+3. open close close on-table on-table on-table on-plate in-fridge on-pan
+4. close close open on-table on-table on-table on-plate in-fridge in-hand
+5. close close open on-table on-table on-table on-plate in-fridge in-cabinet
+6. close open close on-table on-table on-table in-hand in-fridge in-cabinet
+7. close open close on-table on-table on-table in-microwave in-fridge in-cabinet
+8. close close close on-table on-table on-table in-microwave in-fridge in-cabinet
+
+Task 21: Prepare the pan with all items and store it in the fridge
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-hand on-plate on-plate on-pan
+3. close close open on-table on-table on-table on-plate on-plate on-pan
+4. close close close on-table on-table on-table on-plate in-hand on-pan
+5. close close close on-table on-table on-table on-plate in-pan on-pan
+6. close close close on-table on-table on-table in-hand in-pan on-pan
+7. close close close on-table on-table on-table in-pan in-pan on-pan
+8. close close close on-table on-table in-hand in-pan in-pan on-pan
+9. open close close on-table on-table in-hand in-pan in-pan on-pan
+10. open close close on-table on-table in-fridge in-pan in-pan in-pan
+11. close close close on-table on-table in-fridge in-pan in-pan in-pan
+
+Task 22: Serve a single dish from the pan
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table on-plate in-hand on-pan
+3. close close close on-table on-table on-table on-plate on-plate in-hand
+4. close close close on-table on-table on-table on-plate on-plate on-plate
+5. close close close on-table on-table on-table in-hand on-plate on-plate
+6. close close close on-table on-table on-table on-plate on-plate on-plate
+
+Task 23: Store the bowl with fish in the microwave
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table on-plate on-plate in-hand
+3. close close close on-table on-table on-table on-plate on-plate in-bowl
+4. close open close on-table in-hand on-table on-plate on-plate in-bowl
+5. close open close on-table in-microwave on-table on-plate on-plate in-bowl
+6. close close close on-table in-microwave on-table on-plate on-plate in-bowl
+
+Task 24: Clear the fridge and prepare for cleaning
+1. close close close in-fridge in-fridge on-table on-plate on-plate on-pan
+2. open close close in-fridge in-fridge on-table on-plate on-plate on-pan
+3. open close close in-hand in-fridge on-table on-plate on-plate on-pan
+4. open close close on-table in-fridge on-table on-plate on-plate on-pan
+5. open close close on-table in-fridge on-table in-hand on-plate on-pan
+6. open close close on-table in-fridge on-table on-table on-plate on-pan
+7. open close close on-table in-fridge on-table on-table in-hand on-pan
+8. close close close on-table in-fridge on-table on-table on-table on-pan
+
