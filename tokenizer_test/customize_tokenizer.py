@@ -8,7 +8,7 @@ from transformers import PreTrainedTokenizerFast
 # Step 1: Load the article
 article = """
 This is an example article. It contains multiple sentences, repeated words, and punctuation!
-For example, this sentence is repeated. This is an example article. No No No. real-word. InFridge
+For example, this sentence is repeated. This is an example article. No No No. real-word. InFridge, RealWorld.
 """
 
 # Step 2: Build the vocabulary from the article (with punctuation split)

@@ -1,555 +1,250 @@
-Task 1: Prepare ingredients for cooking.
-1. opened-door(fridge door)
-2. picked(chicken leg)
-3. closed-door(fridge door)
-4. opened-door(cabinet left door)
-5. picked(salt shaker)
-6. closed-door(cabinet left door)
-7. opened-door(cabinet right door)
-8. picked(pepper shaker)
-9. closed-door(cabinet right door)
-10. on(chicken leg, pot body)
-11. sprinkled-to(salt shaker, pot body)
-12. sprinkled-to(pepper shaker, pot body)
-13. on(pot lid, pot body)
-14. turned-on(stove knob on the right)
+Task 1: Move the apple from the plate in the fridge to the bowl, then place the bowl with the apple into the microwave.
+1. close close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+2. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+3. open close close in-hand on-table in-cabinet on-plate on-plate on-pan
+4. open close close on-table on-table in-cabinet on-plate on-plate on-pan
+5. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+6. close close close on-table on-table in-cabinet in-hand on-plate on-pan
+7. close close close on-table on-table in-cabinet in-bowl on-plate on-pan
+8. close open close on-table on-table in-cabinet in-bowl on-plate on-pan
+9. close open close on-table in-hand in-cabinet in-bowl on-plate on-pan
+10. close open close on-table in-microwave in-cabinet in-bowl on-plate on-pan
+11. close close close on-table in-microwave in-cabinet in-bowl on-plate on-pan
 
-Task 2: Make a cup of tea.
-1. opened-door(cabinet left door)
-2. picked(tea bag)
-3. closed-door(cabinet left door)
-4. opened-door(fridge door)
-5. picked(milk jug)
-6. closed-door(fridge door)
-7. on(tea bag, cup)
-8. turned-on(faucet handle)
-9. filled(cup, water from faucet handle)
-10. off(faucet handle)
-11. added(milk jug, cup)
-12. stirred(cup, spoon)
-13. placed(cup, counter top on the left)
+Task 2: Move pork from the plate to the pan, then store the pan in the cabinet
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+3. close close open on-table on-table in-hand on-plate on-plate on-pan
+4. close close open on-table on-table on-table on-plate on-plate on-pan
+5. close close open on-table on-table on-table on-plate in-hand on-pan
+6. close close open on-table on-table on-table on-plate in-pan on-pan
+7. close close open on-table on-table in-hand on-plate in-pan on-pan
+8. close close open on-table on-table in-cabinet on-plate in-pan on-pan
+9. close close close on-table on-table in-cabinet on-plate in-pan on-pan
 
-Task 3: Clean up kitchen items.
-1. opened-door(cabinet under sink)
-2. picked(sponge)
-3. closed-door(cabinet under sink)
-4. opened-drawer(utensil drawer)
-5. picked(dish soap bottle)
-6. closed-drawer(utensil drawer)
-7. placed(dish soap bottle, counter top on the left)
-8. turned-on(faucet handle)
-9. on(sponge, water from faucet handle)
-10. scrubbed(counter top on the left, sponge)
-11. wiped(counter top on the left, towel)
-12. returned(dish soap bottle, cabinet under sink)
-13. off(faucet handle)
+Task 3: Move the fish from the pan to the bowl, then store the bowl in the fridge
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+3. close close open on-table on-table in-hand on-plate on-plate on-pan
+4. close close open on-table on-table on-table on-plate on-plate on-pan
+5. close close open on-table on-table on-table on-plate on-plate in-hand
+6. close close open on-table on-table on-table on-plate on-plate in-bowl
+7. close close open on-table in-hand on-table on-plate on-plate in-bowl
+8. open close open on-table in-hand on-table on-plate on-plate in-bowl
+9. open close open on-table in-fridge on-table on-plate on-plate in-bowl
+10. close close open on-table in-fridge on-table on-plate on-plate in-bowl
 
-Task 4: Serve food on a plate.
-1. opened-door(fridge door)
-2. picked(pizza slice)
-3. closed-door(fridge door)
-4. on(pizza slice, plate)
-5. opened-door(cabinet right door)
-6. picked(pepper shaker)
-7. closed-door(cabinet right door)
-8. sprinkled-to(pepper shaker, pizza slice)
-9. placed(plate, counter top on the right)
+Task 4: Heat the apple in the microwave, then transfer it to the plate
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close close on-table on-table in-cabinet in-hand on-plate on-pan
+3. close open close on-table on-table in-cabinet in-hand on-plate on-pan
+4. close open close on-table on-table in-cabinet in-microwave on-plate on-pan
+5. close close close on-table on-table in-cabinet in-microwave on-plate on-pan
+6. close open close on-table on-table in-cabinet in-microwave on-plate on-pan
+7. close open close on-table on-table in-cabinet in-hand on-plate on-pan
+8. close close close on-table on-table in-cabinet on-plate on-plate on-pan
 
-Task 5: Make a fruit salad.
-1. opened-door(fridge door)
-2. picked(apple)
-3. closed-door(fridge door)
-4. opened-drawer(cabinet left drawer)
-5. picked(knife)
-6. closed-drawer(cabinet left drawer)
-7. on(apple, cutting board)
-8. chopped(apple, knife)
-9. picked(banana)
-10. peeled(banana)
-11. sliced(banana, knife)
-12. on(banana slices, bowl)
-13. added(apple pieces, bowl)
-14. sprinkled-to(sugar shaker, bowl)
+Task 5: Rearrange the objects—place pork and apple on a plate in the fridge, and fish in the bowl on the table
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close close on-table on-table in-cabinet in-hand on-plate on-pan
+3. open close close on-table on-table in-cabinet in-hand on-plate on-pan
+4. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+5. open close close in-fridge on-table in-cabinet on-plate in-hand on-pan
+6. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+7. close close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+8. close close close in-fridge on-table in-cabinet on-plate on-plate in-hand
+9. close close close in-fridge on-table in-cabinet on-plate on-plate in-bowl
 
-Task 6: Prepare sandwich ingredients.
-1. opened-door(fridge door)
-2. picked(bread loaf)
-3. picked(cheese slice)
-4. picked(ham slice)
-5. closed-door(fridge door)
-6. on(bread loaf, cutting board)
-7. layered(cheese slice, bread loaf)
-8. layered(ham slice, cheese slice)
-9. closed(sandwich with another bread slice)
-10. picked(sandwich)
-11. placed(sandwich, plate on counter top on the left)
+Task 6: Store all containers and objects in the fridge
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. open close close on-table on-table in-cabinet on-plate on-plate on-pan
+3. open close close in-hand on-table in-cabinet on-plate on-plate on-pan
+4. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+5. open close close in-fridge in-hand in-cabinet on-plate on-plate on-pan
+6. open close close in-fridge in-fridge in-cabinet on-plate on-plate on-pan
+7. open close close in-fridge in-fridge in-hand on-plate on-plate on-pan
+8. open close close in-fridge in-fridge in-fridge on-plate on-plate on-pan
+9. close close close in-fridge in-fridge in-fridge on-plate on-plate on-pan
 
-Task 7: Set up coffee machine.
-1. opened-drawer(coffee drawer)
-2. picked(coffee filter)
-3. closed-drawer(coffee drawer)
-4. placed(coffee filter, coffee machine)
-5. opened-drawer(ground coffee drawer)
-6. picked(coffee grounds)
-7. closed-drawer(ground coffee drawer)
-8. on(coffee grounds, coffee filter)
-9. filled(water, coffee machine water tank)
-10. turned-on(coffee machine)
+Task 7: Set the table—arrange the plate, bowl, and pan on the table with apple, pork, and fish
+1. close close close in-fridge in-fridge in-cabinet on-plate on-plate on-pan
+2. open close close in-fridge in-fridge in-cabinet on-plate on-plate on-pan
+3. open close close in-hand in-fridge in-cabinet on-plate on-plate on-pan
+4. open close close on-table in-fridge in-cabinet on-plate on-plate on-pan
+5. open close close on-table in-hand in-cabinet on-plate on-plate on-pan
+6. open close close on-table on-table in-cabinet on-plate on-plate on-pan
+7. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+8. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+9. close close open on-table on-table in-hand on-plate on-plate on-pan
+10. close close open on-table on-table on-table on-plate on-plate on-pan
+11. close close close on-table on-table on-table on-plate in-pan in-bowl
 
-Task 8: Grill vegetables.
-1. opened-door(fridge door)
-2. picked(zucchini)
-3. picked(bell pepper)
-4. closed-door(fridge door)
-5. sliced(zucchini, knife)
-6. sliced(bell pepper, knife)
-7. on(zucchini slices, grill)
-8. on(bell pepper slices, grill)
-9. turned-on(grill knob)
-10. waited(grill timer)
+Task 8: Sort the objects—place pork in the pan in the cabinet and apple in the bowl in the microwave
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+3. close close open on-table on-table in-hand on-plate on-plate on-pan
+4. close close open on-table on-table on-table on-plate on-plate on-pan
+5. close close open on-table on-table on-table on-plate in-hand on-pan
+6. close close open on-table on-table on-table on-plate in-pan on-pan
+7. close close open on-table on-table in-hand on-plate in-pan on-pan
+8. close close open on-table on-table in-cabinet on-plate in-pan on-pan
+9. close close close on-table on-table in-cabinet on-plate in-pan on-pan
+10. close open close on-table on-table in-cabinet in-hand in-pan on-pan
+11. close open close on-table in-hand in-cabinet in-bowl in-pan on-pan
+12. close open close on-table in-microwave in-cabinet in-bowl in-pan on-pan
 
-Task 9: Store leftover food.
-1. on(leftovers, container)
-2. closed(container lid)
-3. opened-door(fridge door)
-4. in(container, fridge shelf)
-5. closed-door(fridge door)
+Task 9: Transfer all objects to the table
+1. close close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+2. open close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+3. open close close in-hand on-table in-cabinet on-plate on-plate on-pan
+4. open close close on-table on-table in-cabinet on-plate on-plate on-pan
+5. open close close on-table on-table in-hand on-plate on-plate on-pan
+6. open close close on-table on-table on-table on-plate on-plate on-pan
+7. close close close on-table on-table on-table on-plate on-plate on-pan
 
-Task 10: Prepare a smoothie.
-1. opened-door(fridge door)
-2. picked(strawberries)
-3. picked(blueberries)
-4. closed-door(fridge door)
-5. in(strawberries, blender)
-6. in(blueberries, blender)
-7. poured(milk, blender)
-8. turned-on(blender switch)
-9. poured(smoothie, glass)
-10. placed(glass, counter top on the right)
+Task 10: Store fish in the fridge, apple in the cabinet, and pork in the microwave
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table on-plate on-plate in-hand
+3. open close close on-table on-table on-table on-plate on-plate in-hand
+4. open close close on-table on-table on-table on-plate on-plate in-bowl
+5. open close close on-table in-hand on-table on-plate on-plate in-bowl
+6. open close close on-table in-fridge on-table on-plate on-plate in-bowl
+7. close close open on-table in-fridge on-table on-plate on-plate in-bowl
+8. close close open on-table in-fridge on-table in-hand on-plate in-bowl
+9. close close open on-table in-fridge on-table in-cabinet on-plate in-bowl
+10. close open close on-table in-fridge on-table in-cabinet in-hand in-bowl
+11. close open close on-table in-fridge on-table in-cabinet in-microwave in-bowl
+12. close close close on-table in-fridge on-table in-cabinet in-microwave in-bowl
 
-Task 11: Prepare a vegetable stir-fry.
-1. opened-door(fridge door)
-2. picked(bell pepper)
-3. picked(zucchini)
-4. closed-door(fridge door)
-5. on(bell pepper, cutting board)
-6. sliced(bell pepper, knife)
-7. on(zucchini, cutting board)
-8. sliced(zucchini, knife)
-9. in(bell pepper slices, pan)
-10. in(zucchini slices, pan)
-11. turned-on(stove knob on the right)
-12. sprinkled-to(salt shaker, pan)
-13. stirred(pan, spatula)
+Task 11: Cook pork—transfer it to the pan, then heat the pan in the microwave
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+3. close close open on-table on-table in-hand on-plate on-plate on-pan
+4. close close open on-table on-table on-table on-plate on-plate on-pan
+5. close close close on-table on-table on-table on-plate in-hand on-pan
+6. close close close on-table on-table on-table on-plate in-pan on-pan
+7. close open close on-table on-table in-hand on-plate in-pan on-pan
+8. close open close on-table on-table in-microwave on-plate in-pan on-pan
+9. close close close on-table on-table in-microwave on-plate in-pan on-pan
 
-Task 12: Wash dishes in the sink.
-1. opened-drawer(cabinet under sink)
-2. picked(dish soap bottle)
-3. closed-drawer(cabinet under sink)
-4. turned-on(faucet handle)
-5. on(sponge, water from faucet handle)
-6. on(sponge, dish soap bottle)
-7. scrubbed(dishes, sponge)
-8. rinsed(dishes, water from faucet handle)
-9. turned-off(faucet handle)
-10. placed(dishes, drying rack)
+Task 12: Empty the fridge—move all objects and containers to the table
+1. close close close in-fridge in-fridge on-table on-plate on-plate on-pan
+2. open close close in-fridge in-fridge on-table on-plate on-plate on-pan
+3. open close close in-hand in-fridge on-table on-plate on-plate on-pan
+4. open close close on-table in-fridge on-table on-plate on-plate on-pan
+5. open close close on-table in-hand on-table on-plate on-plate on-pan
+6. open close close on-table on-table on-table on-plate on-plate on-pan
+7. close close close on-table on-table on-table on-plate on-plate on-pan
 
-Task 13: Set up a baking tray with cookies.
-1. opened-drawer(baking drawer)
-2. picked(baking tray)
-3. closed-drawer(baking drawer)
-4. on(baking tray, counter top on the left)
-5. opened-door(cabinet left door)
-6. picked(cookie dough container)
-7. closed-door(cabinet left door)
-8. placed(cookie dough balls, baking tray)
-9. spaced-out(cookie dough balls, baking tray)
-10. opened-door(oven door)
-11. in(baking tray, oven)
-12. closed-door(oven door)
-13. turned-on(oven knob)
+Task 13: Serve a meal—arrange pork, apple, and fish on a plate, and place it on the table
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table in-hand on-plate on-pan
+3. close close close on-table on-table on-table on-plate in-hand on-pan
+4. close close close on-table on-table on-table on-plate on-plate in-hand
+5. close close close on-table on-table on-table on-plate on-plate on-plate
 
-Task 14: Make a bowl of cereal.
-1. opened-door(cabinet right door)
-2. picked(cereal box)
-3. closed-door(cabinet right door)
-4. opened-door(fridge door)
-5. picked(milk jug)
-6. closed-door(fridge door)
-7. on(cereal, bowl)
-8. poured(milk, bowl)
-9. placed(bowl, counter top on the left)
+Task 14: Clean up—return all objects and containers to their original locations
+1. close close close on-table on-table on-table on-plate on-plate on-plate
+2. open close close in-hand on-table on-table on-plate on-plate on-plate
+3. open close close in-fridge on-table on-table on-plate on-plate on-plate
+4. open close close in-fridge in-hand on-table on-plate on-plate on-plate
+5. open close close in-fridge in-fridge on-table on-plate on-plate on-plate
+6. close close open in-fridge in-fridge on-table on-plate on-plate on-plate
+7. close close open in-fridge in-fridge in-hand on-plate on-plate on-plate
+8. close close open in-fridge in-fridge in-cabinet on-plate on-plate on-plate
+9. close close close in-fridge in-fridge in-cabinet on-plate on-plate on-plate
 
-Task 15: Boil water for pasta.
-1. picked(pot)
-2. filled(pot, water from faucet handle)
-3. placed(pot, stove on the left)
-4. turned-on(stove knob on the left)
-5. waited(pot, stove on the left)
-6. off(stove knob on the left)
+Task 15: Prepare the bowl and plate for serving food
+1. close close close in-fridge on-table in-cabinet on-plate on-plate on-pan
+2. close open close in-fridge in-hand in-cabinet on-plate on-plate on-pan
+3. close open close in-fridge in-microwave in-cabinet on-plate on-plate on-pan
+4. open open close in-hand in-microwave in-cabinet on-plate on-plate on-pan
+5. open open close on-table in-microwave in-cabinet on-plate on-plate on-pan
 
-Task 16: Prepare a sandwich with lettuce and tomato.
-1. opened-door(fridge door)
-2. picked(bread loaf)
-3. picked(tomato)
-4. picked(lettuce)
-5. closed-door(fridge door)
-6. on(bread loaf, cutting board)
-7. sliced(tomato, knife)
-8. on(tomato slices, bread loaf)
-9. on(lettuce, bread loaf)
-10. closed(sandwich with another bread slice)
-11. placed(sandwich, plate on counter top on the right)
+Task 16: Heat fish, then transfer it to the bowl
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close open close on-table on-table on-table on-plate on-plate in-hand
+3. close open close on-table on-table on-table on-plate on-plate in-microwave
+4. close close close on-table on-table on-table on-plate on-plate in-microwave
+5. close open close on-table on-table on-table on-plate on-plate in-hand
+6. close open close on-table on-table on-table on-plate on-plate in-bowl
 
-Task 17: Clean the counter after cooking.
-1. opened-drawer(cabinet under sink)
-2. picked(sponge)
-3. closed-drawer(cabinet under sink)
-4. turned-on(faucet handle)
-5. on(sponge, water from faucet handle)
-6. scrubbed(counter top on the left, sponge)
-7. wiped(counter top on the left, towel)
-8. turned-off(faucet handle)
-9. returned(sponge, cabinet under sink)
+Task 17: Place all objects into the bowl and store it in the cabinet
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close close on-table on-table in-cabinet on-plate in-hand on-pan
+3. close close close on-table on-table in-cabinet on-plate in-bowl on-pan
+4. close close close on-table on-table in-cabinet on-plate in-bowl in-hand
+5. close close close on-table on-table in-cabinet on-plate in-bowl in-bowl
+6. close close close on-table in-hand in-cabinet in-hand in-bowl in-bowl
+7. close close open on-table in-cabinet in-cabinet in-hand in-bowl in-bowl
+8. close close close on-table in-cabinet in-cabinet in-bowl in-bowl in-bowl
 
-Task 18: Serve coffee.
-1. picked(coffee mug)
-2. on(coffee mug, coffee machine)
-3. pressed(start button on coffee machine)
-4. waited(coffee machine)
-5. off(start button on coffee machine)
-6. picked(coffee mug)
-7. placed(coffee mug, counter top on the right)
+Task 18: Transfer the pan to the microwave and clean the table
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close open close on-table on-table in-hand on-plate on-plate on-pan
+3. close open close on-table on-table in-microwave on-plate on-plate on-pan
+4. close close close on-table on-table in-microwave on-plate on-plate on-pan
+5. open close close in-hand on-table in-microwave on-plate on-plate on-pan
+6. open close close in-fridge on-table in-microwave on-plate on-plate on-pan
+7. close close open in-fridge in-hand in-microwave on-plate on-plate on-pan
+8. close close close in-fridge in-cabinet in-microwave on-plate on-plate on-pan
 
-Task 19: Store cut vegetables in the fridge.
-1. picked(container)
-2. on(cut vegetables, container)
-3. closed(container lid)
-4. opened-door(fridge door)
-5. in(container, fridge shelf)
-6. closed-door(fridge door)
+Task 19: Arrange objects on the table for a meal
+1. close close close in-fridge in-cabinet in-cabinet on-plate on-plate on-pan
+2. open close close in-hand in-cabinet in-cabinet on-plate on-plate on-pan
+3. open close close on-table in-cabinet in-cabinet on-plate on-plate on-pan
+4. close close open on-table in-hand in-cabinet on-plate on-plate on-pan
+5. close close open on-table on-table in-cabinet on-plate on-plate on-pan
+6. close close open on-table on-table in-hand on-plate on-plate on-pan
+7. close close close on-table on-table on-table on-plate on-plate on-pan
+8. close close close on-table on-table on-table in-bowl on-plate on-pan
 
-Task 20: Bake a pizza in the oven.
-1. opened-door(fridge door)
-2. picked(pizza)
-3. closed-door(fridge door)
-4. opened-door(oven door)
-5. in(pizza, oven)
-6. closed-door(oven door)
-7. turned-on(oven knob)
-8. waited(oven timer)
+Task 20: Store all food items separately
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table on-plate in-hand on-pan
+3. open close close on-table on-table on-table on-plate in-fridge on-pan
+4. close close open on-table on-table on-table on-plate in-fridge in-hand
+5. close close open on-table on-table on-table on-plate in-fridge in-cabinet
+6. close open close on-table on-table on-table in-hand in-fridge in-cabinet
+7. close open close on-table on-table on-table in-microwave in-fridge in-cabinet
+8. close close close on-table on-table on-table in-microwave in-fridge in-cabinet
 
-Task 21: Make a cup of hot chocolate.
-1. opened-door(cabinet left door)
-2. picked(cocoa powder)
-3. closed-door(cabinet left door)
-4. on(cocoa powder, mug)
-5. turned-on(faucet handle)
-6. filled(mug, water from faucet handle)
-7. off(faucet handle)
-8. stirred(mug, spoon)
-9. placed(mug, counter top on the left)
+Task 21: Prepare the pan with all items and store it in the fridge
+1. close close close on-table on-table in-cabinet on-plate on-plate on-pan
+2. close close open on-table on-table in-hand on-plate on-plate on-pan
+3. close close open on-table on-table on-table on-plate on-plate on-pan
+4. close close close on-table on-table on-table on-plate in-hand on-pan
+5. close close close on-table on-table on-table on-plate in-pan on-pan
+6. close close close on-table on-table on-table in-hand in-pan on-pan
+7. close close close on-table on-table on-table in-pan in-pan on-pan
+8. close close close on-table on-table in-hand in-pan in-pan on-pan
+9. open close close on-table on-table in-hand in-pan in-pan on-pan
+10. open close close on-table on-table in-fridge in-pan in-pan in-pan
+11. close close close on-table on-table in-fridge in-pan in-pan in-pan
 
-Task 22: Prepare ingredients for a salad.
-1. opened-door(fridge door)
-2. picked(lettuce)
-3. picked(cucumber)
-4. picked(tomato)
-5. closed-door(fridge door)
-6. on(cucumber, cutting board)
-7. sliced(cucumber, knife)
-8. on(tomato, cutting board)
-9. sliced(tomato, knife)
-10. placed(lettuce, bowl)
-11. added(cucumber slices, bowl)
-12. added(tomato slices, bowl)
+Task 22: Serve a single dish from the pan
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table on-plate in-hand on-pan
+3. close close close on-table on-table on-table on-plate on-plate in-hand
+4. close close close on-table on-table on-table on-plate on-plate on-plate
+5. close close close on-table on-table on-table in-hand on-plate on-plate
+6. close close close on-table on-table on-table on-plate on-plate on-plate
 
-Task 23: Heat soup on the stove.
-1. opened-door(fridge door)
-2. picked(soup container)
-3. closed-door(fridge door)
-4. opened-lid(soup container)
-5. poured(soup, pot)
-6. on(pot, stove on the right)
-7. turned-on(stove knob on the right)
-8. waited(pot on stove)
-9. off(stove knob on the right)
-10. picked(bowl)
-11. poured(soup, bowl)
+Task 23: Store the bowl with fish in the microwave
+1. close close close on-table on-table on-table on-plate on-plate on-pan
+2. close close close on-table on-table on-table on-plate on-plate in-hand
+3. close close close on-table on-table on-table on-plate on-plate in-bowl
+4. close open close on-table in-hand on-table on-plate on-plate in-bowl
+5. close open close on-table in-microwave on-table on-plate on-plate in-bowl
+6. close close close on-table in-microwave on-table on-plate on-plate in-bowl
 
-Task 24: Assemble a fruit platter.
-1. opened-door(fridge door)
-2. picked(grapes)
-3. picked(strawberries)
-4. picked(apple)
-5. closed-door(fridge door)
-6. on(grapes, plate)
-7. on(strawberries, plate)
-8. sliced(apple, knife)
-9. on(apple slices, plate)
+Task 24: Clear the fridge and prepare for cleaning
+1. close close close in-fridge in-fridge on-table on-plate on-plate on-pan
+2. open close close in-fridge in-fridge on-table on-plate on-plate on-pan
+3. open close close in-hand in-fridge on-table on-plate on-plate on-pan
+4. open close close on-table in-fridge on-table on-plate on-plate on-pan
+5. open close close on-table in-fridge on-table in-hand on-plate on-pan
+6. open close close on-table in-fridge on-table on-table on-plate on-pan
+7. open close close on-table in-fridge on-table on-table in-hand on-pan
+8. close close close on-table in-fridge on-table on-table on-table on-pan
 
-Task 25: Season a salad with dressing.
-1. opened-door(fridge door)
-2. picked(dressing bottle)
-3. closed-door(fridge door)
-4. on(dressing bottle, bowl)
-5. sprinkled-to(dressing, salad in bowl)
-6. stirred(salad, salad spoon)
-7. placed(bowl, counter top on the left)
-
-Task 26: Prepare a full breakfast spread.
-1. opened-door(fridge door)
-2. picked(bacon strips)
-3. picked(eggs)
-4. picked(butter)
-5. closed-door(fridge door)
-6. opened-drawer(cabinet left drawer)
-7. picked(skillet)
-8. closed-drawer(cabinet left drawer)
-9. placed(skillet, stove on the right)
-10. turned-on(stove knob on the right)
-11. on(bacon strips, skillet)
-12. cooked(bacon strips, skillet)
-13. picked(bread loaf)
-14. sliced(bread loaf, knife)
-15. placed(bread slices, toaster)
-16. turned-on(toaster knob)
-17. cracked(eggs, skillet)
-18. cooked(eggs, skillet)
-19. picked(orange)
-20. sliced(orange, knife)
-21. poured(orange juice, glass)
-22. off(stove knob on the right)
-23. on(butter, toast)
-24. plated(eggs, plate)
-25. plated(bacon strips, plate)
-26. plated(toast, plate)
-27. placed(plate, counter top on the left)
-28. placed(glass, counter top on the right)
-
-Task 27: Prepare ingredients for a stew.
-1. opened-door(fridge door)
-2. picked(beef cubes)
-3. picked(carrots)
-4. picked(potatoes)
-5. closed-door(fridge door)
-6. opened-drawer(cabinet left drawer)
-7. picked(knife)
-8. closed-drawer(cabinet left drawer)
-9. on(carrots, cutting board)
-10. chopped(carrots, knife)
-11. on(potatoes, cutting board)
-12. chopped(potatoes, knife)
-13. picked(large pot)
-14. on(beef cubes, pot)
-15. on(carrots, pot)
-16. on(potatoes, pot)
-17. filled(pot, water)
-18. placed(pot, stove on the left)
-19. turned-on(stove knob on the left)
-20. added(salt, pot)
-21. added(pepper, pot)
-22. stirred(pot, spoon)
-23. waited(pot, stove)
-24. off(stove knob on the left)
-25. placed(pot, counter top on the left)
-
-Task 28: Set up a dinner table.
-1. opened-drawer(utensil drawer)
-2. picked(fork)
-3. picked(knife)
-4. picked(spoon)
-5. closed-drawer(utensil drawer)
-6. opened-door(cabinet left door)
-7. picked(plate)
-8. picked(glass)
-9. picked(napkin)
-10. closed-door(cabinet left door)
-11. placed(plate, dining table)
-12. placed(fork, dining table)
-13. placed(knife, dining table)
-14. placed(spoon, dining table)
-15. placed(glass, dining table)
-16. placed(napkin, dining table)
-17. opened-door(cabinet right door)
-18. picked(wine bottle)
-19. closed-door(cabinet right door)
-20. placed(wine bottle, dining table)
-21. opened-drawer(cabinet left drawer)
-22. picked(candle)
-23. closed-drawer(cabinet left drawer)
-24. placed(candle, dining table)
-25. lit(candle, match)
-
-Task 29: Make a pot of vegetable soup.
-1. opened-door(fridge door)
-2. picked(celery)
-3. picked(carrots)
-4. picked(tomato)
-5. closed-door(fridge door)
-6. opened-drawer(cabinet left drawer)
-7. picked(knife)
-8. closed-drawer(cabinet left drawer)
-9. on(celery, cutting board)
-10. chopped(celery, knife)
-11. on(carrots, cutting board)
-12. chopped(carrots, knife)
-13. on(tomato, cutting board)
-14. chopped(tomato, knife)
-15. picked(soup pot)
-16. on(celery, pot)
-17. on(carrots, pot)
-18. on(tomato, pot)
-19. added(salt, pot)
-20. added(pepper, pot)
-21. filled(pot, water)
-22. placed(pot, stove on the right)
-23. turned-on(stove knob on the right)
-24. simmered(pot, stove)
-25. off(stove knob on the right)
-26. ladled(soup, bowl)
-27. placed(bowl, counter top on the left)
-
-Task 30: Bake a batch of cookies.
-1. opened-drawer(baking drawer)
-2. picked(baking tray)
-3. picked(mixing bowl)
-4. picked(mixing spoon)
-5. closed-drawer(baking drawer)
-6. opened-door(fridge door)
-7. picked(butter)
-8. picked(eggs)
-9. picked(milk)
-10. closed-door(fridge door)
-11. opened-drawer(cabinet left drawer)
-12. picked(flour container)
-13. picked(sugar container)
-14. picked(chocolate chips)
-15. closed-drawer(cabinet left drawer)
-16. added(butter, mixing bowl)
-17. added(sugar, mixing bowl)
-18. added(eggs, mixing bowl)
-19. added(flour, mixing bowl)
-20. stirred(ingredients, mixing bowl)
-21. on(cookie dough, baking tray)
-22. spaced-out(cookie dough balls, baking tray)
-23. opened-door(oven door)
-24. in(baking tray, oven)
-25. closed-door(oven door)
-26. turned-on(oven knob)
-27. baked(cookies, oven)
-28. opened-door(oven door)
-29. removed(baking tray, oven)
-30. placed(baking tray, counter top on the left)
-
-Task 31: Make a grilled cheese sandwich.
-1. opened-door(fridge door)
-2. picked(bread loaf)
-3. picked(cheese slice)
-4. picked(butter)
-5. closed-door(fridge door)
-6. opened-drawer(cabinet left drawer)
-7. picked(skillet)
-8. closed-drawer(cabinet left drawer)
-9. on(bread slice, butter)
-10. layered(cheese slice, bread slice)
-11. layered(another bread slice, cheese slice)
-12. placed(skillet, stove on the right)
-13. turned-on(stove knob on the right)
-14. on(sandwich, skillet)
-15. grilled(sandwich, skillet)
-16. flipped(sandwich, spatula)
-17. off(stove knob on the right)
-18. picked(sandwich)
-19. placed(sandwich, plate on counter top)
-
-Task 32: Prepare a fruit smoothie.
-1. opened-door(fridge door)
-2. picked(banana)
-3. picked(strawberries)
-4. picked(milk)
-5. closed-door(fridge door)
-6. opened-drawer(cabinet left drawer)
-7. picked(blender)
-8. closed-drawer(cabinet left drawer)
-9. on(banana, blender)
-10. on(strawberries, blender)
-11. poured(milk, blender)
-12. turned-on(blender switch)
-13. blended(ingredients, blender)
-14. turned-off(blender switch)
-15. poured(smoothie, glass)
-16. placed(glass, counter top on the left)
-
-Task 33: Make a simple salad.
-1. opened-door(fridge door)
-2. picked(lettuce)
-3. picked(tomato)
-4. picked(cucumber)
-5. closed-door(fridge door)
-6. on(lettuce, cutting board)
-7. chopped(lettuce, knife)
-8. on(tomato, cutting board)
-9. sliced(tomato, knife)
-10. on(cucumber, cutting board)
-11. sliced(cucumber, knife)
-12. placed(lettuce, bowl)
-13. added(tomato slices, bowl)
-14. added(cucumber slices, bowl)
-15. added(salad dressing, bowl)
-16. tossed(salad, tongs)
-17. placed(bowl, counter top on the right)
-
-Task 34: Make a cup of coffee.
-1. opened-drawer(coffee drawer)
-2. picked(coffee grounds)
-3. picked(coffee filter)
-4. closed-drawer(coffee drawer)
-5. placed(coffee filter, coffee machine)
-6. on(coffee grounds, coffee filter)
-7. opened-drawer(cabinet under sink)
-8. picked(water pitcher)
-9. closed-drawer(cabinet under sink)
-10. filled(water pitcher, faucet handle)
-11. poured(water, coffee machine water tank)
-12. turned-on(coffee machine)
-13. waited(coffee machine)
-14. off(coffee machine)
-15. picked(coffee mug)
-16. poured(coffee, coffee mug)
-17. placed(coffee mug, counter top on the left)
-
-Task 35: Organize pantry shelves.
-1. opened-door(pantry door)
-2. picked(canned beans)
-3. picked(pasta box)
-4. picked(rice bag)
-5. placed(canned beans, pantry shelf)
-6. placed(pasta box, pantry shelf)
-7. placed(rice bag, pantry shelf)
-8. opened-drawer(pantry drawer)
-9. picked(cereal box)
-10. picked(spice jar)
-11. placed(cereal box, pantry shelf)
-12. placed(spice jar, pantry shelf)
-13. closed-door(pantry door)
-
-Task 36: Make scrambled eggs.
-1. opened-door(fridge door)
-2. picked(eggs)
-3. picked(butter)
-4. closed-door(fridge door)
-5. opened-drawer(cabinet left drawer)
-6. picked(skillet)
-7. closed-drawer(cabinet left drawer)
-8. placed(skillet, stove on the left)
-9. turned-on(stove knob on the left)
-10. cracked(eggs, bowl)
-11. added(salt, eggs)
-12. added(pepper, eggs)
-13. whisked(eggs, fork)
-14. poured(eggs, skillet)
-15. scrambled(eggs, spatula)
-16. off(stove knob on the left)
-17. placed(eggs, plate)
-18. placed(plate, counter top on the right)
