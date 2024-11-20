@@ -23,8 +23,8 @@ dataset = Dataset.from_dict({"text": custom_texts}).map(tokenize_function, remov
 train_dataset = dataset  # Use the full dataset for training
 
 # Calculate save_steps based on the number of epochs and dataset size
-num_epochs = 200
-batch_size = 5
+num_epochs = 100
+batch_size = 4
 num_training_steps = (len(train_dataset) // batch_size) * num_epochs
 save_every_n_epochs = 10
 save_steps = num_training_steps // (num_epochs / save_every_n_epochs)

@@ -10,7 +10,7 @@ model.to(device)
 
 # Load custom_texts from dataset.txt
 from learn_pddl.datasets.load_fun import load_custom_texts
-custom_texts = load_custom_texts("datasets/dataset.txt")
+custom_texts = load_custom_texts("datasets/dataset.txt", remove_newline=False)
 
 # Ensure PAD token is set
 if tokenizer.pad_token is None:
@@ -49,7 +49,10 @@ def generate_follow_up_steps(prompt, max_length=1000, temperature=0.05, top_p=0.
 # Evaluate the model by generating follow-up steps
 for i, task in enumerate(custom_texts):
     # Use only the initial prompt part (first sentence)
-    prompt = task.split('.')[0] + "."  # e.g., "Task 1: Move the robot to the charging station."
+    # prompt = task.split('.')[0] + "."  # e.g., "Task 1: Move the robot to the charging station."
+
+    # separate at the first next line \n
+    prompt = task.split("\n")[0]  # e.g., "Task 1: Move the robot to the charging station."
     generated_steps = generate_follow_up_steps(prompt)
     print(f"Input Prompt: {prompt}")
     print("\n")

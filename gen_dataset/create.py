@@ -1,5 +1,6 @@
 import random
 import copy
+random.seed(None) 
 
 # 0. categories of object, poses and actions
 
@@ -131,7 +132,7 @@ def place_object(state, pos):
 
 def use_object(state, obj):
     if obj == Affordances.FAUCET_HANDLE:
-        actions = [(Actions.TURN_ON, obj), (Actions.TURN_OFF, obj)]
+        actions = [(Actions.GRASP, obj), (Actions.TURN_ON, obj), (Actions.TURN_OFF, obj)]
     elif obj == MoveObjects.SALT_SHAKER:
         actions = [(Actions.SPRINKLE, obj)]
     elif obj == MoveObjects.PEPPER_SHAKER:
@@ -209,45 +210,45 @@ def get_state_traj():
     # 7. pot in stove
     action7_1 = pick_out_object(state6, MoveObjects.POT)
     action7_2 = place_object(state6, Positions.ON_STOVE_LEFT)
-    action7_3 = use_object(state6, Affordances.STOVE_LEFT_KNOB)
+
+    # lid on pot
+    action7_3 = pick_out_object(state6, MoveObjects.POT_LID)
+    action7_4 = place_object(state6, Positions.ON_POT)
+
+
+    action7_5 = use_object(state6, Affordances.STOVE_LEFT_KNOB)
 
     state7 = copy.deepcopy(state6)
 
-    traj.append({'s': state7, 'a': action7_1 + action7_2 + action7_3})
+    traj.append({'s': state7, 'a': action7_1 + action7_2 + action7_3 + action7_4 + action7_5})
 
     # 8. bowl on counter
     action8_1 = pick_out_object(state7, MoveObjects.BOWL)
     action8_2 = place_object(state7, Positions.ON_COUNTER_RIGHT)
 
+    state8 = copy.deepcopy(state7)
+    state8.set_state(MoveObjects.BOWL, Positions.ON_COUNTER_RIGHT)
 
-    # 9. chicken in bowl
-    action9_1 = pick_out_object(state7, MoveObjects.SPOON)
-    action9_2 = use_object(state7, MoveObjects.SPOON)
-    action9_3 = place_object(state7, Positions.IN_BOWL)
+    traj.append({'s': state8, 'a': action8_1 + action8_2})
 
-    state9 = copy.deepcopy(state7)
-    state9.set_state(MoveObjects.SPOON, Positions.IN_BOWL)
-    state9.set_state(MoveObjects.CHICKEN_LEG, Positions.IN_BOWL)
+    # 9. take off pot lid
+    action9_1 = pick_out_object(state8, MoveObjects.POT_LID)
+    action9_2 = place_object(state8, Positions.ON_COUNTER_RIGHT)
 
-    traj.append({'s': state9, 'a': action9_1 + action9_2 + action9_3})
+    state9 = copy.deepcopy(state8)
+    state9.set_state(MoveObjects.POT_LID, Positions.ON_COUNTER_RIGHT)
 
-    # ================================ convert to any format ========================
+    traj.append({'s': state9, 'a': action9_1 + action9_2})
 
-    # 1. (action, obj) 
+    # 10. chicken in bowl
+    action10_1 = pick_out_object(state9, MoveObjects.SPOON)
+    action10_2 = use_object(state9, MoveObjects.SPOON)
+    action10_3 = place_object(state9, Positions.IN_BOWL)
 
-    text = ""
+    state10 = copy.deepcopy(state9)
+    state10.set_state(MoveObjects.SPOON, Positions.IN_BOWL)
+    state10.set_state(MoveObjects.CHICKEN_LEG, Positions.IN_BOWL)
 
-    for key, value in traj[0]['s'].state_list.items():
-        text += key + " " + value + " | "
-    text += "\n"
+    traj.append({'s': state10, 'a': action10_1 + action10_2 + action10_3})
 
-    length_actions = 0
-    for traj_i in traj:
-        actions = traj_i['a']
-        length_actions += len(actions)
-
-        action_text = ' '.join(' '.join(pair) for pair in actions)
-        text += action_text 
-
-
-    return text, length_actions
+    return traj
