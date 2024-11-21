@@ -180,7 +180,25 @@ class Dynamic:
         return state_new
 
 
+def check_generated_actions(task):
+    state_dim = 7
+    state_text = task[:state_dim * 2]
+    action_text = task[state_dim * 2:]
 
+    # ============ 1. parse state and actions
+    state = parse_state_text(state_text)
+    action = parse_action_text(action_text)
+
+
+    # ============ 2. create dynamics
+
+    dynamic = Dynamic(state, action)
+
+    # ============ 3. forward
+
+    dynamic.forward()
+
+    return dynamic.stage.finished_tasks
 
 # ============ 0. read state and actions from txt
 
@@ -189,22 +207,18 @@ class Dynamic:
 texts = load_custom_texts('dataset.txt', remove_newline=True)
 state_traj = convert_state_trajectory(texts)
 
-task0 = state_traj['task_0'][0]
+for task_name in state_traj.keys():
+    print('+++++++++++++++++++++++++++'*3)
+    print(task_name)
+    print('+++++++++++++++++++++++++++'*3)
+    task = state_traj[task_name][0]
 
-state_dim = 7
-state_text = task0[:state_dim * 2]
-action_text = task0[state_dim * 2:]
+    now_stage = check_generated_actions(task)
+    if now_stage < 10:
+        a = 1
 
-# ============ 1. parse state and actions
-state = parse_state_text(state_text)
-action = parse_action_text(action_text)
+    
 
 
-# ============ 2. create dynamics
 
-dynamic = Dynamic(state, action)
-
-# ============ 3. forward
-
-dynamic.forward()
 

@@ -67,7 +67,11 @@ class Affordances:
 
 move_objects_list = [MoveObjects.SALT_SHAKER, MoveObjects.PEPPER_SHAKER, MoveObjects.SPOON, MoveObjects.POT_LID, MoveObjects.CHICKEN_LEG, MoveObjects.POT, MoveObjects.BOWL]
 static_objects_list = [StaticObjects.FRIDGE, StaticObjects.FRIDGE_SHELF, StaticObjects.COUNTER_LEFT, StaticObjects.COUNTER_RIGHT, StaticObjects.STOVE_LEFT, StaticObjects.STOVE_RIGHT, StaticObjects.DRAWER_PLACE, StaticObjects.KITCHEN_SINK, StaticObjects.CABINET_LEFT, StaticObjects.CABINET_RIGHT]
-positions_list = [Positions.IN_FRIDGE, Positions.IN_FRIDGE_SHELF, Positions.ON_COUNTER_LEFT, Positions.ON_COUNTER_RIGHT, Positions.ON_STOVE_LEFT, Positions.ON_STOVE_RIGHT, Positions.IN_DRAWER_PLACE, Positions.IN_KITCHEN_SINK, Positions.IN_CABINET_LEFT, Positions.IN_CABINET_RIGHT, Positions.ON_POT, Positions.IN_POT, Positions.IN_BOWL, Positions.IN_SINK]
+
+positions_storage_list = [Positions.IN_FRIDGE, Positions.IN_FRIDGE_SHELF, Positions.ON_COUNTER_LEFT, Positions.ON_COUNTER_RIGHT, Positions.ON_STOVE_LEFT, Positions.ON_STOVE_RIGHT, Positions.IN_DRAWER_PLACE, Positions.IN_KITCHEN_SINK, Positions.IN_CABINET_LEFT, Positions.IN_CABINET_RIGHT]
+positions_object_list = [Positions.ON_POT, Positions.IN_POT, Positions.IN_BOWL, Positions.IN_SINK]
+positions_list = positions_storage_list + positions_object_list
+
 actions_list = [Actions.MOVE, Actions.PICK, Actions.PLACE, Actions.GRASP, Actions.PULL, Actions.PUSH, Actions.TURN_ON, Actions.TURN_OFF, Actions.SPRINKLE, Actions.SCOOP]
 affordances_list = [Affordances.FRIDGE_DOOR_HANDLE, Affordances.CABINET_LEFT_DOOR_HANDLE, Affordances.CABINET_RIGHT_DOOR_HANDLE, Affordances.FAUCET_HANDLE, Affordances.STOVE_LEFT_KNOB, Affordances.STOVE_RIGHT_KNOB, Affordances.DRAWER_HANDLE]
 
@@ -158,7 +162,17 @@ def pick_out_object(state, obj):
 
 def place_object(state, pos):
     actions = []
+
+    if pos in in_articulated_objects:
+        affordance = affordance_mapping[pos]
+        actions.append((Actions.GRASP, affordance))
+        actions.append((Actions.PULL, affordance))
+
     actions.append((Actions.PLACE, pos))
+
+    if pos in in_articulated_objects:
+        actions.append((Actions.PUSH, affordance))
+
 
     return actions
 
@@ -180,6 +194,13 @@ def use_object(state, obj):
 
 
 # ======================== sub tasks ========================
+
+def check_in_list(obj, obj_list):
+    # obj is an element or also a list
+    if isinstance(obj, list):
+        return all([item in obj_list for item in obj])
+    else:
+        return obj in obj_list
 
 class Stages:
     # 1. Pick out chicken & place chicken in sink ---------------------------
@@ -207,36 +228,40 @@ class Stages:
     }
 
     def __init__(self):
-        self.stage = 0
+        self.stage = [0]
+        
+    @property
+    def finished_tasks(self):
+        return len(self.stage)
 
     def check_stage(self, state):
-        if self.stage == 0 and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_SINK:
+        if check_in_list(0, self.stage) and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_SINK:
             new_stage = 1
-        elif self.stage == 1 and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_POT:
+        elif check_in_list(1, self.stage) and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_POT:
             new_stage = 2
-        elif self.stage == 2 and state.state_list[MoveObjects.SALT_SHAKER] == Positions.ON_COUNTER_RIGHT:
+        elif check_in_list(2, self.stage) and state.state_list[MoveObjects.SALT_SHAKER] == Positions.ON_COUNTER_RIGHT:
             new_stage = 3
-        elif self.stage == 3 and state.state_list[MoveObjects.PEPPER_SHAKER] == Positions.ON_COUNTER_RIGHT:
+        elif check_in_list(2, self.stage) and state.state_list[MoveObjects.PEPPER_SHAKER] == Positions.ON_COUNTER_RIGHT:
             new_stage = 4
-        elif self.stage == 4 and state.state_list[MoveObjects.POT] == Positions.IN_SINK:
+        elif check_in_list([3,4], self.stage) and state.state_list[MoveObjects.POT] == Positions.IN_SINK:
             new_stage = 5
-        elif self.stage == 5 and state.state_list[MoveObjects.POT] == Positions.ON_STOVE_LEFT:
+        elif check_in_list(5, self.stage) and state.state_list[MoveObjects.POT] == Positions.ON_STOVE_LEFT:
             new_stage = 6
-        elif self.stage == 6 and state.state_list[MoveObjects.POT_LID] == Positions.ON_POT:
+        elif check_in_list(5, self.stage) and state.state_list[MoveObjects.POT_LID] == Positions.ON_POT:
             new_stage = 7
-        elif self.stage == 7 and state.state_list[MoveObjects.BOWL] == Positions.ON_COUNTER_RIGHT:
+        elif check_in_list(0, self.stage) and state.state_list[MoveObjects.BOWL] == Positions.ON_COUNTER_RIGHT:
             new_stage = 8
-        elif self.stage == 8 and state.state_list[MoveObjects.POT_LID] != Positions.ON_POT:
+        elif check_in_list(8, self.stage) and state.state_list[MoveObjects.POT_LID] != Positions.ON_POT:
             new_stage = 9
-        elif self.stage == 9 and state.state_list[MoveObjects.SPOON] == Positions.IN_BOWL:
+        elif check_in_list(9, self.stage) and state.state_list[MoveObjects.SPOON] == Positions.IN_BOWL:
             new_stage = 10
         else:
-            new_stage = self.stage
+            new_stage = 0
 
 
-        if new_stage != self.stage:
-            print("finish task ", new_stage, ":", self.stage_finish_text[new_stage])
-            self.stage = new_stage
+        if not check_in_list(new_stage, self.stage):
+            print("$$$$ finish task ", new_stage, ":", self.stage_finish_text[new_stage])
+            self.stage.append(new_stage)
 
 def task1(state):
     # 1. Pick out chicken & place chicken in sink ---------------------------
