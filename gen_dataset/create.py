@@ -4,7 +4,8 @@ random.seed(None)
 
 # 0. categories of object, poses and actions
 
-class MoveObjects(enumerate):
+
+class MoveObjects:
     SALT_SHAKER = 'SaltShaker'
     PEPPER_SHAKER = 'PepperShaker'
     SPOON =  'Spoon'
@@ -13,7 +14,7 @@ class MoveObjects(enumerate):
     POT = 'Pot'
     BOWL = 'Bowl'
 
-class StaticObjects(enumerate):
+class StaticObjects:
     FRIDGE = 'Fridge'
     FRIDGE_SHELF = 'FridgeShelf'
     COUNTER_LEFT = 'CounterLeft'
@@ -26,7 +27,7 @@ class StaticObjects(enumerate):
     CABINET_RIGHT = 'CabinetRight'
 
 
-class Positions(enumerate):
+class Positions:
     IN_FRIDGE = 'InFridge'
     IN_FRIDGE_SHELF = 'InFridgeShelf'
     ON_COUNTER_LEFT = 'OnCounterLeft'
@@ -43,7 +44,7 @@ class Positions(enumerate):
     IN_SINK = 'InSink'
 
 
-class Actions(enumerate):
+class Actions:
     MOVE = 'Move'
     PICK = 'Pick'
     PLACE = 'Place'
@@ -55,7 +56,7 @@ class Actions(enumerate):
     SPRINKLE = 'Sprinkle'
     SCOOP = 'Scoop'
 
-class Affordances(enumerate):
+class Affordances:
     FRIDGE_DOOR_HANDLE = 'FridgeDoorHandle'
     CABINET_LEFT_DOOR_HANDLE = 'CabinetLeftDoorHandle'
     CABINET_RIGHT_DOOR_HANDLE = 'CabinetRightDoorHandle'
@@ -73,17 +74,48 @@ affordances_list = [Affordances.FRIDGE_DOOR_HANDLE, Affordances.CABINET_LEFT_DOO
 initial_positions_list = [Positions.IN_FRIDGE, Positions.IN_FRIDGE_SHELF, Positions.ON_COUNTER_LEFT, Positions.ON_COUNTER_RIGHT, \
                           Positions.IN_DRAWER_PLACE, Positions.IN_KITCHEN_SINK, Positions.IN_CABINET_LEFT, Positions.IN_CABINET_RIGHT]
 
+position_2_object= {
+    Positions.IN_FRIDGE: StaticObjects.FRIDGE,
+    Positions.IN_FRIDGE_SHELF: StaticObjects.FRIDGE_SHELF,
+    Positions.ON_COUNTER_LEFT: StaticObjects.COUNTER_LEFT,
+    Positions.ON_COUNTER_RIGHT: StaticObjects.COUNTER_RIGHT,
+    Positions.ON_STOVE_LEFT: StaticObjects.STOVE_LEFT,
+    Positions.ON_STOVE_RIGHT: StaticObjects.STOVE_RIGHT,
+    Positions.IN_DRAWER_PLACE: StaticObjects.DRAWER_PLACE,
+    Positions.IN_KITCHEN_SINK: StaticObjects.KITCHEN_SINK,
+    Positions.IN_CABINET_LEFT: StaticObjects.CABINET_LEFT,
+    Positions.IN_CABINET_RIGHT: StaticObjects.CABINET_RIGHT,
+    Positions.ON_POT: MoveObjects.POT,
+    Positions.IN_POT: MoveObjects.POT,
+    Positions.IN_BOWL: MoveObjects.BOWL,
+    Positions.IN_SINK: StaticObjects.KITCHEN_SINK,
+}
+
+object_2_position = {value: key for key, value in position_2_object.items()}
 
 affordance_mapping = {
     Positions.IN_FRIDGE: Affordances.FRIDGE_DOOR_HANDLE,
     Positions.IN_CABINET_LEFT: Affordances.CABINET_LEFT_DOOR_HANDLE,
     Positions.IN_CABINET_RIGHT: Affordances.CABINET_RIGHT_DOOR_HANDLE,
     Positions.IN_DRAWER_PLACE: Affordances.DRAWER_HANDLE,
+    Positions.IN_SINK: Affordances.FAUCET_HANDLE,
 }
 
-articualted_objects = [StaticObjects.FRIDGE, StaticObjects.CABINET_LEFT, StaticObjects.CABINET_RIGHT, StaticObjects.DRAWER_PLACE]
+affordance_2_object = {
+    Affordances.FRIDGE_DOOR_HANDLE: StaticObjects.FRIDGE,
+    Affordances.CABINET_LEFT_DOOR_HANDLE: StaticObjects.CABINET_LEFT,
+    Affordances.CABINET_RIGHT_DOOR_HANDLE: StaticObjects.CABINET_RIGHT,
+    Affordances.DRAWER_HANDLE: StaticObjects.DRAWER_PLACE,
+    Affordances.FAUCET_HANDLE: StaticObjects.KITCHEN_SINK,
+    Affordances.STOVE_LEFT_KNOB: StaticObjects.STOVE_LEFT,
+    Affordances.STOVE_RIGHT_KNOB: StaticObjects.STOVE_RIGHT,
+}
+
+
+articulated_objects = [StaticObjects.FRIDGE, StaticObjects.CABINET_LEFT, StaticObjects.CABINET_RIGHT, StaticObjects.DRAWER_PLACE]
 in_articulated_objects = [Positions.IN_FRIDGE, Positions.IN_CABINET_LEFT, Positions.IN_CABINET_RIGHT, Positions.IN_DRAWER_PLACE]
 
+objects_with_states = move_objects_list +  articulated_objects + [StaticObjects.KITCHEN_SINK, StaticObjects.STOVE_LEFT, StaticObjects.STOVE_RIGHT]
 
 # 1. generate initial pos of every object
 class State:
@@ -311,7 +343,7 @@ def get_state_traj():
     traj = [{'s': state, 'a': []}]
 
 
-    task_sequence = generate_sequence_with_11_12(prob=0.3)
+    task_sequence = generate_sequence_with_11_12(prob=0.0)
 
     for idx in task_sequence:
         state, actions = task_mapping[idx](state)
