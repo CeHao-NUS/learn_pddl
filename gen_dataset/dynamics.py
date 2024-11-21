@@ -59,11 +59,16 @@ def parse_action_text(text):
     return actions
     
 
+
+    
+
 class Dynamic:
 
     def __init__(self, state, actions):
         self.state = state
         self.actions = actions
+        self.stage = Stages()
+
         self.in_hand = ''
         self.in_dual_hand = ''
         self.traj = []
@@ -78,6 +83,7 @@ class Dynamic:
             if state_new:
                 self.state.diff_with(state_new)
                 self.state = state_new
+                self.stage.check_stage(self.state)
             else:
                 print('Failed !!!')
                 break

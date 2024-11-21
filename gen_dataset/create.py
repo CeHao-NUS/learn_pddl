@@ -181,6 +181,63 @@ def use_object(state, obj):
 
 # ======================== sub tasks ========================
 
+class Stages:
+    # 1. Pick out chicken & place chicken in sink ---------------------------
+    # 2. chicken in pot ---------------------------
+    # 3. Salt  ---------------------------
+    # 4. Pepper ---------------------------
+    # 5. pot in sink ---------------------------
+    # 6. pot on stove ---------------------------
+    # 7 lid on pot ---------------------------
+    # 8. bowl on counter ---------------------------
+    # 9. take off pot lid ---------------------------
+    # 10. chicken in bowl ---------------------------
+
+    stage_finish_text = {
+        1: "Pick out chicken & place chicken in sink",
+        2: "chicken in pot",
+        3: "Salt",
+        4: "Pepper",
+        5: "pot in sink",
+        6: "pot on stove",
+        7: "lid on pot",
+        8: "bowl on counter",
+        9: "take off pot lid",
+        10: "chicken in bowl",
+    }
+
+    def __init__(self):
+        self.stage = 0
+
+    def check_stage(self, state):
+        if self.stage == 0 and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_SINK:
+            new_stage = 1
+        elif self.stage == 1 and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_POT:
+            new_stage = 2
+        elif self.stage == 2 and state.state_list[MoveObjects.SALT_SHAKER] == Positions.ON_COUNTER_RIGHT:
+            new_stage = 3
+        elif self.stage == 3 and state.state_list[MoveObjects.PEPPER_SHAKER] == Positions.ON_COUNTER_RIGHT:
+            new_stage = 4
+        elif self.stage == 4 and state.state_list[MoveObjects.POT] == Positions.IN_SINK:
+            new_stage = 5
+        elif self.stage == 5 and state.state_list[MoveObjects.POT] == Positions.ON_STOVE_LEFT:
+            new_stage = 6
+        elif self.stage == 6 and state.state_list[MoveObjects.POT_LID] == Positions.ON_POT:
+            new_stage = 7
+        elif self.stage == 7 and state.state_list[MoveObjects.BOWL] == Positions.ON_COUNTER_RIGHT:
+            new_stage = 8
+        elif self.stage == 8 and state.state_list[MoveObjects.POT_LID] != Positions.ON_POT:
+            new_stage = 9
+        elif self.stage == 9 and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_BOWL:
+            new_stage = 10
+        else:
+            new_stage = self.stage
+
+
+        if new_stage != self.stage:
+            print("finish task ", new_stage, ":", self.stage_finish_text[new_stage])
+            self.stage = new_stage
+
 def task1(state):
     # 1. Pick out chicken & place chicken in sink ---------------------------
     action1_1 = pick_out_object(state, MoveObjects.CHICKEN_LEG)
