@@ -119,7 +119,7 @@ def pick_out_object(state, obj):
 
     actions.append((Actions.PICK, obj))
 
-    if pos in articualted_objects:
+    if pos in in_articulated_objects:
         actions.append((Actions.PUSH, affordance))
 
     return actions
@@ -147,108 +147,175 @@ def use_object(state, obj):
     return actions
 
 
+# ======================== sub tasks ========================
+
+def task1(state):
+    # 1. Pick out chicken & place chicken in sink ---------------------------
+    action1_1 = pick_out_object(state, MoveObjects.CHICKEN_LEG)
+    action1_2 = place_object(state, Positions.IN_SINK)
+    state2 = copy.deepcopy(state)
+    state2.set_state(MoveObjects.CHICKEN_LEG, Positions.IN_SINK)
+
+    return state2, action1_1 + action1_2
+
+def task2(state):
+    # 2. chicken in pot ---------------------------
+    action2_1 = use_object(state, Affordances.FAUCET_HANDLE)
+    action2_2 = pick_out_object(state, MoveObjects.CHICKEN_LEG)
+    action2_3 = place_object(state, Positions.IN_POT)
+
+    state3 = copy.deepcopy(state)
+    state3.set_state(MoveObjects.CHICKEN_LEG, Positions.IN_POT)
+
+    return state3, action2_1 + action2_2 + action2_3
+
+def task3(state):
+    # 3. Salt  ---------------------------
+    action3_1 = pick_out_object(state, MoveObjects.SALT_SHAKER)
+    action3_2 = use_object(state, MoveObjects.SALT_SHAKER)
+    action3_3 = place_object(state, Positions.ON_COUNTER_RIGHT)
+
+    state4 = copy.deepcopy(state)
+    state4.set_state(MoveObjects.SALT_SHAKER, Positions.ON_COUNTER_RIGHT)
+
+    return state4, action3_1 + action3_2 + action3_3
+
+def task4(state):
+    # 4. Pepper ---------------------------
+    action4_1 = pick_out_object(state, MoveObjects.PEPPER_SHAKER)
+    action4_2 = use_object(state, MoveObjects.PEPPER_SHAKER)
+    action4_3 = place_object(state, Positions.ON_COUNTER_RIGHT)
+
+    state5 = copy.deepcopy(state)
+    state5.set_state(MoveObjects.PEPPER_SHAKER, Positions.ON_COUNTER_RIGHT)
+
+    return state5, action4_1 + action4_2 + action4_3
+
+
+def task5(state):
+    # 5. pot in sink ---------------------------
+    action5_1 = pick_out_object(state, MoveObjects.POT)
+    action5_2 = place_object(state, Positions.IN_SINK)
+    action5_3 = use_object(state, Affordances.FAUCET_HANDLE)
+
+    state6 = copy.deepcopy(state)
+    state6.set_state(MoveObjects.POT, Positions.IN_SINK)
+
+    return state6, action5_1 + action5_2 + action5_3
+
+
+def task6(state):
+    # 6. pot on stove ---------------------------
+    action6_1 = pick_out_object(state, MoveObjects.POT)
+    action6_2 = place_object(state, Positions.ON_STOVE_LEFT)
+
+    state7 = copy.deepcopy(state)
+    state7.set_state(MoveObjects.POT, Positions.ON_STOVE_LEFT)
+
+    return state7, action6_1 + action6_2
+
+def task7(state):
+    # 7 lid on pot ---------------------------
+    action7_1 = pick_out_object(state, MoveObjects.POT_LID)
+    action7_2 = place_object(state, Positions.ON_POT)
+    action7_3 = use_object(state, Affordances.STOVE_LEFT_KNOB)
+
+    state7 = copy.deepcopy(state)
+    state7.set_state(MoveObjects.POT_LID, Positions.ON_POT)
+
+    return state7, action7_1 + action7_2 + action7_3
+
+def task8(state):
+    # 8. bowl on counter ---------------------------
+    action8_1 = pick_out_object(state, MoveObjects.BOWL)
+    action8_2 = place_object(state, Positions.ON_COUNTER_RIGHT)
+
+    state8 = copy.deepcopy(state)
+    state8.set_state(MoveObjects.BOWL, Positions.ON_COUNTER_RIGHT)
+
+    return state8, action8_1 + action8_2
+
+def task9(state):
+    # 9. take off pot lid ---------------------------
+    action9_1 = pick_out_object(state, MoveObjects.POT_LID)
+    action9_2 = place_object(state, Positions.ON_COUNTER_RIGHT)
+
+    state9 = copy.deepcopy(state)
+    state9.set_state(MoveObjects.POT_LID, Positions.ON_COUNTER_RIGHT)
+
+    return state9, action9_1 + action9_2
+
+
+def task10(state):
+    # 10. chicken in bowl ---------------------------
+    action10_1 = pick_out_object(state, MoveObjects.SPOON)
+    action10_2 = use_object(state, MoveObjects.SPOON)
+    action10_3 = place_object(state, Positions.IN_BOWL)
+
+    state10 = copy.deepcopy(state)
+    state10.set_state(MoveObjects.SPOON, Positions.IN_BOWL)
+    state10.set_state(MoveObjects.CHICKEN_LEG, Positions.IN_BOWL)
+
+    return state10, action10_1 + action10_2 + action10_3
+
+def dummy_openclose(state):
+    # find one in affordances_list, grasp open, close
+    actions = []
+    affordance = random.choice(affordances_list)
+    actions.append((Actions.GRASP, affordance))
+    actions.append((Actions.PULL, affordance))
+    actions.append((Actions.PUSH, affordance))
+
+    return state, actions
+
+def dummy_pickplace(state):
+    # find one in move_objects_list, pick, place
+    obj = random.choice(move_objects_list)
+    action_x1 = pick_out_object(state, obj)
+
+    if len(action_x1) > 1:
+        last_push = [action_x1.pop()]
+    else:
+        last_push = []
+
+    action_x2 = place_object(state, random.choice(positions_list))
+
+    return state, action_x1 + action_x2 + last_push
+
+def add_state_action(traj, state, actions):
+    traj.append({'s': state, 'a': actions})
+
+task_mapping = {
+    1: task1,
+    2: task2,
+    3: task3,
+    4: task4,
+    5: task5,
+    6: task6,
+    7: task7,
+    8: task8,
+    9: task9,
+    10: task10,
+    11: dummy_openclose,
+    12: dummy_pickplace,
+}
+
 # ===================================== traj ================================
 # [['state':[State], 'actions': ['', '', '']], ]
+
+from task_seq import generate_sequence_with_11_12
 
 def get_state_traj():
     state = State()
     state.random_initial()
     traj = [{'s': state, 'a': []}]
 
-    # 1. Pick out chicken 
-    action1 = pick_out_object(state, MoveObjects.CHICKEN_LEG)
 
-    # 2. place chicken in sink
-    actions2 = place_object(state, Positions.IN_SINK)
-    state2 = copy.deepcopy(state)
-    state2.set_state(MoveObjects.CHICKEN_LEG, Positions.IN_SINK)
+    task_sequence = generate_sequence_with_11_12(prob=0.3)
 
-    traj.append({'s': state2, 'a': action1 + actions2})
+    for idx in task_sequence:
+        state, actions = task_mapping[idx](state)
+        add_state_action(traj, state, actions)
 
-    # 3. chicken in pot
-    action3_1 = use_object(state2, Affordances.FAUCET_HANDLE)
-    action3_2 = pick_out_object(state2, MoveObjects.CHICKEN_LEG)
-    action3_3 = place_object(state2, Positions.IN_POT)
-
-    state3 = copy.deepcopy(state2)
-    state3.set_state(MoveObjects.CHICKEN_LEG, Positions.IN_POT)
-
-    traj.append({'s': state3, 'a': action3_1 + action3_2 + action3_3})
-
-    # 4. Salt 
-    action4_1 = pick_out_object(state3, MoveObjects.SALT_SHAKER)
-    action4_2 = use_object(state3, MoveObjects.SALT_SHAKER)
-    action4_3 = place_object(state3, Positions.ON_COUNTER_RIGHT)
-
-    state4 = copy.deepcopy(state3)
-    state4.set_state(MoveObjects.SALT_SHAKER, Positions.ON_COUNTER_RIGHT)
-
-    traj.append({'s': state4, 'a': action4_1 + action4_2 + action4_3})
-
-
-    # 5. Pepper
-    action5_1 = pick_out_object(state4, MoveObjects.PEPPER_SHAKER)
-    action5_2 = use_object(state4, MoveObjects.PEPPER_SHAKER)
-    action5_3 = place_object(state4, Positions.ON_COUNTER_RIGHT)
-
-    state5 = copy.deepcopy(state4)
-    state5.set_state(MoveObjects.PEPPER_SHAKER, Positions.ON_COUNTER_RIGHT)
-
-    traj.append({'s': state5, 'a': action5_1 + action5_2 + action5_3})
-
-
-    # 6. pot in sink
-    action6_1 = pick_out_object(state5, MoveObjects.POT)
-    action6_2 = place_object(state5, Positions.IN_SINK)
-    action6_3 = use_object(state5, Affordances.FAUCET_HANDLE)
-
-    state6 = copy.deepcopy(state5)
-    state6.set_state(MoveObjects.POT, Positions.IN_SINK)
-
-    traj.append({'s': state6, 'a': action6_1 + action6_2 + action6_3})
-
-    # 7. pot in stove
-    action7_1 = pick_out_object(state6, MoveObjects.POT)
-    action7_2 = place_object(state6, Positions.ON_STOVE_LEFT)
-
-    # lid on pot
-    action7_3 = pick_out_object(state6, MoveObjects.POT_LID)
-    action7_4 = place_object(state6, Positions.ON_POT)
-
-
-    action7_5 = use_object(state6, Affordances.STOVE_LEFT_KNOB)
-
-    state7 = copy.deepcopy(state6)
-
-    traj.append({'s': state7, 'a': action7_1 + action7_2 + action7_3 + action7_4 + action7_5})
-
-    # 8. bowl on counter
-    action8_1 = pick_out_object(state7, MoveObjects.BOWL)
-    action8_2 = place_object(state7, Positions.ON_COUNTER_RIGHT)
-
-    state8 = copy.deepcopy(state7)
-    state8.set_state(MoveObjects.BOWL, Positions.ON_COUNTER_RIGHT)
-
-    traj.append({'s': state8, 'a': action8_1 + action8_2})
-
-    # 9. take off pot lid
-    action9_1 = pick_out_object(state8, MoveObjects.POT_LID)
-    action9_2 = place_object(state8, Positions.ON_COUNTER_RIGHT)
-
-    state9 = copy.deepcopy(state8)
-    state9.set_state(MoveObjects.POT_LID, Positions.ON_COUNTER_RIGHT)
-
-    traj.append({'s': state9, 'a': action9_1 + action9_2})
-
-    # 10. chicken in bowl
-    action10_1 = pick_out_object(state9, MoveObjects.SPOON)
-    action10_2 = use_object(state9, MoveObjects.SPOON)
-    action10_3 = place_object(state9, Positions.IN_BOWL)
-
-    state10 = copy.deepcopy(state9)
-    state10.set_state(MoveObjects.SPOON, Positions.IN_BOWL)
-    state10.set_state(MoveObjects.CHICKEN_LEG, Positions.IN_BOWL)
-
-    traj.append({'s': state10, 'a': action10_1 + action10_2 + action10_3})
 
     return traj

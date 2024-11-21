@@ -37,7 +37,8 @@ tokenizer_fast.save_pretrained("./custom_tokenizer")
 loaded_tokenizer = PreTrainedTokenizerFast.from_pretrained("./custom_tokenizer")
 
 # Step 5: Test the tokenizer on a sample text
-sample_text = "This is an example sentence. It contains punctuation! real-word. InFridge"
+# sample_text = "This is an example sentence. It contains punctuation! real-word. InFridge [PAD]"
+sample_text = "[PAD]"
 tokens = loaded_tokenizer(sample_text, return_tensors="np")["input_ids"]
 print("Input Text:", sample_text)
 print("Token IDs:", tokens)

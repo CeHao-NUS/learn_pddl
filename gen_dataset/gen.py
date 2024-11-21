@@ -61,20 +61,21 @@ def gen_fun2(traj):
 
 
 
-# with open('dataset.txt', 'w') as f:
+with open('dataset.txt', 'w') as f:
 
-#     for idx in range(500):
-#         traj = get_state_traj()
-#         text, length_action = gen_fun2(traj)
+    for idx in range(2000):
+        traj = get_state_traj()
+        text, length_action = gen_fun2(traj)
 
-#         f.write(text + "\n\n")
+        f.write(text + "\n\n")
 
 lengths = []
-for idx in range(1000):
+for idx in range(2000):
     traj = get_state_traj()
     text, length_action = gen_fun1(traj)
     lengths.append(length_action)
 
+print('max length is', max(lengths))
 
 import seaborn as sns
 import matplotlib.pyplot as plt
