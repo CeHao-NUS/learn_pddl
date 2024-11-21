@@ -228,7 +228,7 @@ class Stages:
             new_stage = 8
         elif self.stage == 8 and state.state_list[MoveObjects.POT_LID] != Positions.ON_POT:
             new_stage = 9
-        elif self.stage == 9 and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_BOWL:
+        elif self.stage == 9 and state.state_list[MoveObjects.SPOON] == Positions.IN_BOWL:
             new_stage = 10
         else:
             new_stage = self.stage
@@ -400,7 +400,7 @@ def get_state_traj():
     traj = [{'s': state, 'a': []}]
 
 
-    task_sequence = generate_sequence_with_11_12(prob=0.0)
+    task_sequence = generate_sequence_with_11_12(prob=0.3)
 
     for idx in task_sequence:
         state, actions = task_mapping[idx](state)

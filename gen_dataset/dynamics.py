@@ -169,7 +169,13 @@ class Dynamic:
 
         elif act in [Actions.SCOOP]:
             # special
-            a = 1
+            case1 = self.in_hand == MoveObjects.SPOON
+
+            if case1:
+                state_new.set_state(MoveObjects.SPOON, Positions.IN_BOWL)
+            else:
+                print('Error: Cannot scoop')
+                return None
 
         return state_new
 
