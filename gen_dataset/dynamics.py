@@ -103,6 +103,7 @@ class Dynamic:
             if act == Actions.PICK:
                 if self.in_hand:
                     print('Error: Already have object in hand')
+                    a = b
                     return None
                 
                 target_position = state_new.get_state(target)
@@ -111,6 +112,7 @@ class Dynamic:
             elif act == Actions.PLACE:
                 if not self.in_hand:
                     print('Error: No object in hand')
+                    a = b
                     return None
 
                 target_name = position_2_object[target]
@@ -127,6 +129,7 @@ class Dynamic:
                     self.in_hand = ''
             else:
                 print('Error: Cannot pick or place the target')
+                a = b
                 return None
 
             return state_new
@@ -140,6 +143,7 @@ class Dynamic:
                 self.in_dual_hand = target
             else:
                 print('Error: Cannot grasp the target')
+                a = b
                 return None
 
             return state_new
@@ -175,6 +179,7 @@ class Dynamic:
                 state_new.set_state(MoveObjects.SPOON, Positions.IN_BOWL)
             else:
                 print('Error: Cannot scoop')
+                a = b
                 return None
 
         return state_new
@@ -207,6 +212,8 @@ def check_generated_actions(task):
 texts = load_custom_texts('dataset.txt', remove_newline=True)
 state_traj = convert_state_trajectory(texts)
 
+all_length = []
+
 for task_name in state_traj.keys():
     print('+++++++++++++++++++++++++++'*3)
     print(task_name)
@@ -218,7 +225,11 @@ for task_name in state_traj.keys():
         a = 1
 
     
+    all_length.append(now_stage)
 
+
+print('Average: ', sum(all_length) / len(all_length))
+a = 1
 
 
 

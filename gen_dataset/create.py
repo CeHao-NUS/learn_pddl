@@ -196,7 +196,7 @@ def use_object(state, obj):
 # ======================== sub tasks ========================
 
 def check_in_list(obj, obj_list):
-    # obj is an element or also a list
+    # obj is an element or also a list, obj is not in not_object, obj_list is a list
     if isinstance(obj, list):
         return all([item in obj_list for item in obj])
     else:
@@ -235,25 +235,25 @@ class Stages:
         return len(self.stage)
 
     def check_stage(self, state):
-        if check_in_list(0, self.stage) and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_SINK:
+        if check_in_list(0, self.stage) and not check_in_list(1, self.stage) and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_SINK:
             new_stage = 1
-        elif check_in_list(1, self.stage) and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_POT:
+        elif check_in_list(1, self.stage) and not check_in_list(2, self.stage) and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_POT:
             new_stage = 2
-        elif check_in_list(2, self.stage) and state.state_list[MoveObjects.SALT_SHAKER] == Positions.ON_COUNTER_RIGHT:
+        elif check_in_list(2, self.stage) and not check_in_list(3, self.stage) and state.state_list[MoveObjects.SALT_SHAKER] == Positions.ON_COUNTER_RIGHT:
             new_stage = 3
-        elif check_in_list(2, self.stage) and state.state_list[MoveObjects.PEPPER_SHAKER] == Positions.ON_COUNTER_RIGHT:
+        elif check_in_list(2, self.stage) and not check_in_list(4, self.stage) and state.state_list[MoveObjects.PEPPER_SHAKER] == Positions.ON_COUNTER_RIGHT:
             new_stage = 4
-        elif check_in_list([3,4], self.stage) and state.state_list[MoveObjects.POT] == Positions.IN_SINK:
+        elif check_in_list([3,4], self.stage) and not check_in_list(5, self.stage) and state.state_list[MoveObjects.POT] == Positions.IN_SINK:
             new_stage = 5
-        elif check_in_list(5, self.stage) and state.state_list[MoveObjects.POT] == Positions.ON_STOVE_LEFT:
+        elif check_in_list(5, self.stage) and not check_in_list(6, self.stage) and state.state_list[MoveObjects.POT] == Positions.ON_STOVE_LEFT:
             new_stage = 6
-        elif check_in_list(5, self.stage) and state.state_list[MoveObjects.POT_LID] == Positions.ON_POT:
+        elif check_in_list(5, self.stage) and not check_in_list(7, self.stage) and state.state_list[MoveObjects.POT_LID] == Positions.ON_POT:
             new_stage = 7
-        elif check_in_list(0, self.stage) and state.state_list[MoveObjects.BOWL] == Positions.ON_COUNTER_RIGHT:
+        elif check_in_list(0, self.stage) and not check_in_list(8, self.stage) and state.state_list[MoveObjects.BOWL] == Positions.ON_COUNTER_RIGHT:
             new_stage = 8
-        elif check_in_list(8, self.stage) and state.state_list[MoveObjects.POT_LID] != Positions.ON_POT:
+        elif check_in_list([7, 8], self.stage) and not check_in_list(9, self.stage) and state.state_list[MoveObjects.POT_LID] != Positions.ON_POT:
             new_stage = 9
-        elif check_in_list(9, self.stage) and state.state_list[MoveObjects.SPOON] == Positions.IN_BOWL:
+        elif check_in_list(9, self.stage) and not check_in_list(10, self.stage) and state.state_list[MoveObjects.SPOON] == Positions.IN_BOWL:
             new_stage = 10
         else:
             new_stage = 0
@@ -372,29 +372,38 @@ def task10(state):
 
     return state10, action10_1 + action10_2 + action10_3
 
-def dummy_openclose(state):
-    # find one in affordances_list, grasp open, close
-    actions = []
-    affordance = random.choice(affordances_list)
-    actions.append((Actions.GRASP, affordance))
-    actions.append((Actions.PULL, affordance))
-    actions.append((Actions.PUSH, affordance))
+# def dummy_openclose(state):
+#     # find one in affordances_list, grasp open, close
+#     actions = []
+#     affordance = random.choice(affordances_list)
+#     actions.append((Actions.GRASP, affordance))
+#     actions.append((Actions.PULL, affordance))
+#     actions.append((Actions.PUSH, affordance))
 
-    return state, actions
+#     return state, actions
 
 def dummy_pickplace(state):
+    new_state = copy.deepcopy(state)
+
     # find one in move_objects_list, pick, place
     obj = random.choice(move_objects_list)
-    action_x1 = pick_out_object(state, obj)
+
+    action_x1 = pick_out_object(new_state, obj)
 
     if len(action_x1) > 1:
         last_push = [action_x1.pop()]
     else:
         last_push = []
 
-    action_x2 = place_object(state, random.choice(positions_list))
+    place_target = random.choice(positions_list)
+    action_x2 = place_object(new_state, place_target)
 
-    return state, action_x1 + action_x2 + last_push
+    new_state.set_state(obj, place_target)
+
+    return new_state, action_x1 + action_x2 + last_push
+
+def dummy_openclose(state):
+    return state, []
 
 def add_state_action(traj, state, actions):
     traj.append({'s': state, 'a': actions})
