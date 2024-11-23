@@ -203,7 +203,7 @@ def check_generated_actions(task):
 
     dynamic.forward()
 
-    return dynamic.stage.finished_tasks
+    return dynamic.stage.finished_tasks - 1
 
 # ============ 0. read state and actions from txt
 
@@ -227,6 +227,11 @@ for task_name in state_traj.keys():
     
     all_length.append(now_stage)
 
+
+from collections import Counter
+frequency = Counter(all_length)
+
+print('Frequency: ', frequency)
 
 print('Average: ', sum(all_length) / len(all_length))
 a = 1

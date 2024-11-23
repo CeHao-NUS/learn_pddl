@@ -372,38 +372,37 @@ def task10(state):
 
     return state10, action10_1 + action10_2 + action10_3
 
-# def dummy_openclose(state):
-#     # find one in affordances_list, grasp open, close
-#     actions = []
-#     affordance = random.choice(affordances_list)
-#     actions.append((Actions.GRASP, affordance))
-#     actions.append((Actions.PULL, affordance))
-#     actions.append((Actions.PUSH, affordance))
+def dummy_openclose(state):
+    # find one in affordances_list, grasp open, close
+    actions = []
+    affordance = random.choice(affordances_list)
+    actions.append((Actions.GRASP, affordance))
+    actions.append((Actions.PULL, affordance))
+    actions.append((Actions.PUSH, affordance))
 
-#     return state, actions
+    return state, actions
 
 def dummy_pickplace(state):
     new_state = copy.deepcopy(state)
 
-    # find one in move_objects_list, pick, place
+    # find one in move_objects_list, pick, place / execpt chicken_leg
     obj = random.choice(move_objects_list)
+
+    while obj == MoveObjects.CHICKEN_LEG:
+        obj = random.choice(move_objects_list)
 
     action_x1 = pick_out_object(new_state, obj)
 
-    if len(action_x1) > 1:
-        last_push = [action_x1.pop()]
-    else:
-        last_push = []
 
     place_target = random.choice(positions_list)
     action_x2 = place_object(new_state, place_target)
 
     new_state.set_state(obj, place_target)
 
-    return new_state, action_x1 + action_x2 + last_push
+    return new_state, action_x1 + action_x2 
 
-def dummy_openclose(state):
-    return state, []
+# def dummy_openclose(state):
+#     return state, []
 
 def add_state_action(traj, state, actions):
     traj.append({'s': state, 'a': actions})
