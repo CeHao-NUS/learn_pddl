@@ -234,7 +234,7 @@ class Stages:
     def finished_tasks(self):
         return len(self.stage)
 
-    def check_stage(self, state):
+    def check_stage(self, state, verbose=False):
         if check_in_list(0, self.stage) and not check_in_list(1, self.stage) and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_SINK:
             new_stage = 1
         elif check_in_list(1, self.stage) and not check_in_list(2, self.stage) and state.state_list[MoveObjects.CHICKEN_LEG] == Positions.IN_POT:
@@ -258,10 +258,14 @@ class Stages:
         else:
             new_stage = 0
 
-
+        
         if not check_in_list(new_stage, self.stage):
-            print("$$$$ finish task ", new_stage, ":", self.stage_finish_text[new_stage])
+            if verbose:
+                print("$$$$ finish task ", new_stage, ":", self.stage_finish_text[new_stage])
             self.stage.append(new_stage)
+            return new_stage
+        
+        return False
 
 def task1(state):
     # 1. Pick out chicken & place chicken in sink ---------------------------
@@ -427,13 +431,13 @@ task_mapping = {
 
 from task_seq import generate_sequence_with_11_12
 
-def get_state_traj():
+def get_state_traj(prob=0.0):
     state = State()
     state.random_initial()
     traj = [{'s': state, 'a': []}]
 
 
-    task_sequence = generate_sequence_with_11_12(prob=0.3)
+    task_sequence = generate_sequence_with_11_12(prob=prob)
 
     for idx in task_sequence:
         state, actions = task_mapping[idx](state)

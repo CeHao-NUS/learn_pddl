@@ -1,5 +1,6 @@
 from create import *
 from utils import *
+import numpy as np
 
 Positions.OPEN = 'Open'
 Positions.CLOSE = 'Close'
@@ -64,26 +65,34 @@ def parse_action_text(text):
 
 class Dynamic:
 
-    def __init__(self, state, actions):
+    def __init__(self, state, actions, verbose=False):
         self.state = state
         self.actions = actions
         self.stage = Stages()
+        self.verbose = verbose
 
         self.in_hand = ''
         self.in_dual_hand = ''
         self.traj = []
+        # key from 1 to 10, value is -1
+        self.stage_action_num = {i: -1 for i in range(1, 11)}
 
     def forward(self):
         self.traj.append({'s': self.state, 'a': []})
 
         for act in self.actions:
-            print('====================')
-            print(act)
+            if self.verbose:
+                print('====================')
+                print(act)
             state_new = self.apply_action(self.state, act)
             if state_new:
-                self.state.diff_with(state_new)
+                if self.verbose:
+                    self.state.diff_with(state_new)
                 self.state = state_new
-                self.stage.check_stage(self.state)
+                new_stage = self.stage.check_stage(self.state, self.verbose)
+
+                if new_stage: # add new stage
+                    self.stage_action_num[new_stage] = len(self.traj) - 1
             else:
                 print('Failed !!!')
                 break
@@ -103,7 +112,7 @@ class Dynamic:
             if act == Actions.PICK:
                 if self.in_hand:
                     print('Error: Already have object in hand')
-                    a = b
+                    # a = b
                     return None
                 
                 target_position = state_new.get_state(target)
@@ -112,7 +121,7 @@ class Dynamic:
             elif act == Actions.PLACE:
                 if not self.in_hand:
                     print('Error: No object in hand')
-                    a = b
+                    # a = b
                     return None
 
                 target_name = position_2_object[target]
@@ -129,7 +138,7 @@ class Dynamic:
                     self.in_hand = ''
             else:
                 print('Error: Cannot pick or place the target')
-                a = b
+                # a = b
                 return None
 
             return state_new
@@ -143,7 +152,7 @@ class Dynamic:
                 self.in_dual_hand = target
             else:
                 print('Error: Cannot grasp the target')
-                a = b
+                # a = b
                 return None
 
             return state_new
@@ -179,13 +188,13 @@ class Dynamic:
                 state_new.set_state(MoveObjects.SPOON, Positions.IN_BOWL)
             else:
                 print('Error: Cannot scoop')
-                a = b
+                # a = b
                 return None
 
         return state_new
 
 
-def check_generated_actions(task):
+def check_generated_actions(task, verbose=False):
     state_dim = 7
     state_text = task[:state_dim * 2]
     action_text = task[state_dim * 2:]
@@ -197,44 +206,65 @@ def check_generated_actions(task):
 
     # ============ 2. create dynamics
 
-    dynamic = Dynamic(state, action)
+    dynamic = Dynamic(state, action, verbose=verbose)
 
     # ============ 3. forward
 
     dynamic.forward()
 
-    return dynamic.stage.finished_tasks - 1
-
-# ============ 0. read state and actions from txt
+    return dynamic.stage.finished_tasks - 1, dynamic.stage_action_num
 
 
-# seperate by individual '\n' 
-texts = load_custom_texts('dataset.txt', remove_newline=True)
-state_traj = convert_state_trajectory(texts)
+if __name__ == "__main__":
+    # ============ 0. read state and actions from txt
 
-all_length = []
+    verbose = False
 
-for task_name in state_traj.keys():
-    print('+++++++++++++++++++++++++++'*3)
-    print(task_name)
-    print('+++++++++++++++++++++++++++'*3)
-    task = state_traj[task_name][0]
+    # seperate by individual '\n' 
+    texts = load_custom_texts('dataset.txt', remove_newline=True)
 
-    now_stage = check_generated_actions(task)
-    if now_stage < 10:
-        a = 1
+    # remove "[PAD] [PAD]" in texts[i]
+    texts = [text.replace('[PAD] [PAD] ', '') for text in texts]
 
+
+    state_traj = convert_state_trajectory(texts)
+
+    all_length = []
+    all_stage_action_num = []
+
+    for task_name in state_traj.keys():
+        if verbose:
+            print('+++++++++++++++++++++++++++'*3)
+            print(task_name)
+            print('+++++++++++++++++++++++++++'*3)
+        task = state_traj[task_name][0]
+
+        now_stage, stage_action_num = check_generated_actions(task, verbose=verbose)
+        # if now_stage < 10:
+        #     a = 1
+        all_length.append(now_stage)
+        all_stage_action_num.append(stage_action_num)
+
+
+    from collections import Counter
+    frequency = Counter(all_length)
+
+    print('Frequency: ', frequency)
+
+    print('Average: ', sum(all_length) / len(all_length))
     
-    all_length.append(now_stage)
 
+    # stage_action_num is a list of dict, convert it to dict of lists
+    converted_stage_action_num = {key: [item[key] for item in all_stage_action_num] for key in all_stage_action_num[0].keys()}
 
-from collections import Counter
-frequency = Counter(all_length)
+    # use 150 - every number in the list
+    max_value = 150
+    for key in converted_stage_action_num.keys():
+        converted_stage_action_num[key] = [max_value - item for item in converted_stage_action_num[key]]
 
-print('Frequency: ', frequency)
+    # calculate the mean and std of each key
+    for key in converted_stage_action_num.keys():
+        mean = np.mean(converted_stage_action_num[key])
+        std = np.std(converted_stage_action_num[key])
 
-print('Average: ', sum(all_length) / len(all_length))
-a = 1
-
-
-
+        print(f'{key}: mean {np.round(mean,1)}, std {np.round(std, 2)}')
